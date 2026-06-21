@@ -75,21 +75,33 @@ main {
 }
 
 .hero {
-  background: var(--sand);
-  padding: 64px 24px;
+  background-image: linear-gradient(rgba(31, 58, 82, 0.55), rgba(31, 58, 82, 0.55)), url("assets/hero-david-goliath.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  padding: 90px 24px;
   text-align: center;
 }
 
 .hero .headline {
   font-size: 34px;
   margin: 0 0 6px;
-  color: var(--ink);
+  color: var(--sand-light);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .hero .subtitle {
   font-size: 18px;
-  color: var(--dusk-blue);
+  color: var(--sand-light);
   margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.hero .credit {
+  display: block;
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--sand-light);
+  opacity: 0.75;
 }
 
 .page-title {
