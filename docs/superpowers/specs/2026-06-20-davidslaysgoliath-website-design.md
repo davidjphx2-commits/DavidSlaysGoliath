@@ -27,12 +27,13 @@ Plain HTML/CSS, no framework, no CMS. Same pattern as `stratum137.com`:
 - **Hero image:** public-domain classical art depicting David and Goliath in battle (not the aftermath/decapitation imagery — keep front-page tone confrontational-but-not-gory). Leading candidate: Gustave Doré's 19th-century engraving of David and Goliath. Exact image sourced and licensed-confirmed during implementation (public domain, line-engraving works well against the tan/dusk-blue palette).
 - **Typography:** serif for headlines/scripture quotes (gravitas, editorial feel), sans-serif for body copy (readability)
 - **Tone:** calm, confident, doctrinally serious — not flashy, not corporate
+- **Hero headline:** "A Man After God's Own Heart" with subtitle "Unwavering Faith"
 
 ## Site Structure
 
 | Page | File | Content |
 |------|------|---------|
-| Home | `index.html` | Hero image + verse/tagline, short intro, nav links to the 4 content pages |
+| Home | `index.html` | Hero image with headline "A Man After God's Own Heart" / subtitle "Unwavering Faith", short intro, nav links to the 4 content pages |
 | The Gospel | `gospel.html` | What the gospel is, sin/separation from God, Christ's atonement, what it means to be saved, having a relationship with God |
 | Finding a Good Church | `finding-a-church.html` | Principles for vetting a church: adherence to core biblical doctrines (Scripture authority, Trinity, deity of Christ, salvation by grace through faith, etc.), expository preaching as a primary marker, red flags to avoid |
 | How to Study the Bible | `studying-the-bible.html` | New-believer-level guide: where to start, basic hermeneutics (context, audience, genre), recommended reading order, avoiding common pitfalls (proof-texting, isolating verses) |
