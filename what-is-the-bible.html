@@ -48,31 +48,65 @@
 </p>
 
 <!-- BIG PICTURE STATS -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
-    <rect x="10" y="10" width="155" height="140" rx="8" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="87" y="58" text-anchor="middle" font-size="42" font-weight="700" fill="#1F3A52">66</text>
-    <text x="87" y="82" text-anchor="middle" font-size="13" fill="#3B2F1E">Books</text>
-    <text x="87" y="100" text-anchor="middle" font-size="11" fill="#8C6A3F">39 Old Testament</text>
-    <text x="87" y="116" text-anchor="middle" font-size="11" fill="#8C6A3F">27 New Testament</text>
+<div class="diagram-card">
+  <svg viewBox="0 0 700 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="statFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fff7e8"/>
+        <stop offset="100%" stop-color="#E8DCC0"/>
+      </linearGradient>
+      <linearGradient id="badgeFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2C4F6E"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </linearGradient>
+      <filter id="statShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#3B2F1E" flood-opacity="0.28"/>
+      </filter>
+    </defs>
 
-    <rect x="180" y="10" width="155" height="140" rx="8" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="257" y="58" text-anchor="middle" font-size="42" font-weight="700" fill="#1F3A52">40</text>
-    <text x="257" y="82" text-anchor="middle" font-size="13" fill="#3B2F1E">Authors</text>
-    <text x="257" y="100" text-anchor="middle" font-size="11" fill="#8C6A3F">Kings, shepherds,</text>
-    <text x="257" y="116" text-anchor="middle" font-size="11" fill="#8C6A3F">fishermen, prophets</text>
+    <g filter="url(#statShadow)">
+      <rect x="10" y="14" width="155" height="142" rx="10" fill="url(#statFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="10" y="14" width="155" height="142" rx="10" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="87" cy="34" r="14" fill="url(#badgeFill)"/>
+      <use href="assets/icons.svg#icon-book" x="79" y="26" width="16" height="16" color="#E8DCC0"/>
+      <text x="87" y="76" text-anchor="middle" font-size="36" font-weight="700" fill="#1F3A52">66</text>
+      <text x="87" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#3B2F1E">Books</text>
+      <text x="87" y="116" text-anchor="middle" font-size="11" fill="#8C6A3F">39 Old Testament</text>
+      <text x="87" y="131" text-anchor="middle" font-size="11" fill="#8C6A3F">27 New Testament</text>
+    </g>
 
-    <rect x="350" y="10" width="155" height="140" rx="8" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="427" y="52" text-anchor="middle" font-size="34" font-weight="700" fill="#1F3A52">1,500</text>
-    <text x="427" y="75" text-anchor="middle" font-size="13" fill="#3B2F1E">Years of Writing</text>
-    <text x="427" y="95" text-anchor="middle" font-size="11" fill="#8C6A3F">~1400 BC (Moses)</text>
-    <text x="427" y="111" text-anchor="middle" font-size="11" fill="#8C6A3F">to ~AD 95 (John)</text>
+    <g filter="url(#statShadow)">
+      <rect x="180" y="14" width="155" height="142" rx="10" fill="url(#statFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="180" y="14" width="155" height="142" rx="10" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="257" cy="34" r="14" fill="url(#badgeFill)"/>
+      <use href="assets/icons.svg#icon-quill" x="249" y="26" width="16" height="16" color="#E8DCC0"/>
+      <text x="257" y="76" text-anchor="middle" font-size="36" font-weight="700" fill="#1F3A52">40</text>
+      <text x="257" y="98" text-anchor="middle" font-size="13" font-weight="600" fill="#3B2F1E">Authors</text>
+      <text x="257" y="116" text-anchor="middle" font-size="11" fill="#8C6A3F">Kings, shepherds,</text>
+      <text x="257" y="131" text-anchor="middle" font-size="11" fill="#8C6A3F">fishermen, prophets</text>
+    </g>
 
-    <rect x="520" y="10" width="165" height="140" rx="8" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="602" y="52" text-anchor="middle" font-size="34" font-weight="700" fill="#1F3A52">3</text>
-    <text x="602" y="75" text-anchor="middle" font-size="13" fill="#3B2F1E">Languages</text>
-    <text x="602" y="95" text-anchor="middle" font-size="11" fill="#8C6A3F">Hebrew &bull; Aramaic</text>
-    <text x="602" y="111" text-anchor="middle" font-size="11" fill="#8C6A3F">Greek</text>
+    <g filter="url(#statShadow)">
+      <rect x="350" y="14" width="155" height="142" rx="10" fill="url(#statFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="350" y="14" width="155" height="142" rx="10" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="427" cy="34" r="14" fill="url(#badgeFill)"/>
+      <use href="assets/icons.svg#icon-clock" x="419" y="26" width="16" height="16" color="#E8DCC0"/>
+      <text x="427" y="72" text-anchor="middle" font-size="29" font-weight="700" fill="#1F3A52">1,500</text>
+      <text x="427" y="93" text-anchor="middle" font-size="13" font-weight="600" fill="#3B2F1E">Years of Writing</text>
+      <text x="427" y="113" text-anchor="middle" font-size="11" fill="#8C6A3F">~1400 BC (Moses)</text>
+      <text x="427" y="129" text-anchor="middle" font-size="11" fill="#8C6A3F">to ~AD 95 (John)</text>
+    </g>
+
+    <g filter="url(#statShadow)">
+      <rect x="520" y="14" width="165" height="142" rx="10" fill="url(#statFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="520" y="14" width="165" height="142" rx="10" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="602" cy="34" r="14" fill="url(#badgeFill)"/>
+      <use href="assets/icons.svg#icon-globe" x="594" y="26" width="16" height="16" color="#E8DCC0"/>
+      <text x="602" y="72" text-anchor="middle" font-size="29" font-weight="700" fill="#1F3A52">3</text>
+      <text x="602" y="93" text-anchor="middle" font-size="13" font-weight="600" fill="#3B2F1E">Languages</text>
+      <text x="602" y="113" text-anchor="middle" font-size="11" fill="#8C6A3F">Hebrew &bull; Aramaic</text>
+      <text x="602" y="129" text-anchor="middle" font-size="11" fill="#8C6A3F">Greek</text>
+    </g>
   </svg>
 </div>
 
@@ -91,70 +125,100 @@
 <p>The thirty-nine books of the Protestant Old Testament fall into four major categories:</p>
 
 <!-- OT CATEGORY DIAGRAM -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
-    <text x="350" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#1F3A52">The Old Testament &mdash; 39 Books in 4 Categories</text>
+<div class="diagram-card">
+  <svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="otFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fff7e8"/>
+        <stop offset="100%" stop-color="#E8DCC0"/>
+      </linearGradient>
+      <filter id="otShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#3B2F1E" flood-opacity="0.25"/>
+      </filter>
+    </defs>
 
-    <rect x="10" y="45" width="160" height="320" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="90" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">The Law</text>
-    <text x="90" y="84" text-anchor="middle" font-size="11" fill="#8C6A3F">(Pentateuch / Torah)</text>
-    <text x="90" y="100" text-anchor="middle" font-size="11" fill="#8C6A3F">5 Books</text>
-    <line x1="20" y1="108" x2="160" y2="108" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="90" y="128" text-anchor="middle" font-size="11" fill="#3B2F1E">Genesis</text>
-    <text x="90" y="148" text-anchor="middle" font-size="11" fill="#3B2F1E">Exodus</text>
-    <text x="90" y="168" text-anchor="middle" font-size="11" fill="#3B2F1E">Leviticus</text>
-    <text x="90" y="188" text-anchor="middle" font-size="11" fill="#3B2F1E">Numbers</text>
-    <text x="90" y="208" text-anchor="middle" font-size="11" fill="#3B2F1E">Deuteronomy</text>
-    <text x="90" y="240" text-anchor="middle" font-size="10" fill="#8C6A3F">Creation, the Fall,</text>
-    <text x="90" y="255" text-anchor="middle" font-size="10" fill="#8C6A3F">the Exodus, God&apos;s</text>
-    <text x="90" y="270" text-anchor="middle" font-size="10" fill="#8C6A3F">Law given to Moses</text>
+    <text x="350" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1F3A52">The Old Testament &mdash; 39 Books in 4 Categories</text>
 
-    <rect x="185" y="45" width="160" height="320" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="265" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">History</text>
-    <text x="265" y="84" text-anchor="middle" font-size="11" fill="#8C6A3F">12 Books</text>
-    <line x1="195" y1="108" x2="335" y2="108" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="265" y="128" text-anchor="middle" font-size="11" fill="#3B2F1E">Joshua</text>
-    <text x="265" y="145" text-anchor="middle" font-size="11" fill="#3B2F1E">Judges &bull; Ruth</text>
-    <text x="265" y="162" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Samuel</text>
-    <text x="265" y="179" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Kings</text>
-    <text x="265" y="196" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Chronicles</text>
-    <text x="265" y="213" text-anchor="middle" font-size="11" fill="#3B2F1E">Ezra &bull; Nehemiah</text>
-    <text x="265" y="230" text-anchor="middle" font-size="11" fill="#3B2F1E">Esther</text>
-    <text x="265" y="258" text-anchor="middle" font-size="10" fill="#8C6A3F">Israel&apos;s history from</text>
-    <text x="265" y="273" text-anchor="middle" font-size="10" fill="#8C6A3F">entering Canaan to</text>
-    <text x="265" y="288" text-anchor="middle" font-size="10" fill="#8C6A3F">the Babylonian exile</text>
+    <g filter="url(#otShadow)">
+      <rect x="10" y="48" width="160" height="324" rx="8" fill="url(#otFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="10" y="48" width="160" height="8" rx="4" fill="#B8924D"/>
+      <circle cx="90" cy="74" r="13" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-scroll" x="83" y="67" width="14" height="14" color="#E8DCC0"/>
+      <text x="90" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">The Law</text>
+      <text x="90" y="115" text-anchor="middle" font-size="11" fill="#8C6A3F">(Pentateuch / Torah)</text>
+      <text x="90" y="130" text-anchor="middle" font-size="11" fill="#8C6A3F">5 Books</text>
+      <line x1="20" y1="138" x2="160" y2="138" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="90" y="158" text-anchor="middle" font-size="11" fill="#3B2F1E">Genesis</text>
+      <text x="90" y="178" text-anchor="middle" font-size="11" fill="#3B2F1E">Exodus</text>
+      <text x="90" y="198" text-anchor="middle" font-size="11" fill="#3B2F1E">Leviticus</text>
+      <text x="90" y="218" text-anchor="middle" font-size="11" fill="#3B2F1E">Numbers</text>
+      <text x="90" y="238" text-anchor="middle" font-size="11" fill="#3B2F1E">Deuteronomy</text>
+      <text x="90" y="268" text-anchor="middle" font-size="10" fill="#8C6A3F">Creation, the Fall,</text>
+      <text x="90" y="283" text-anchor="middle" font-size="10" fill="#8C6A3F">the Exodus, God&apos;s</text>
+      <text x="90" y="298" text-anchor="middle" font-size="10" fill="#8C6A3F">Law given to Moses</text>
+    </g>
 
-    <rect x="360" y="45" width="160" height="320" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="440" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Poetry &amp; Wisdom</text>
-    <text x="440" y="84" text-anchor="middle" font-size="11" fill="#8C6A3F">5 Books</text>
-    <line x1="370" y1="108" x2="510" y2="108" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="440" y="128" text-anchor="middle" font-size="11" fill="#3B2F1E">Job</text>
-    <text x="440" y="148" text-anchor="middle" font-size="11" fill="#3B2F1E">Psalms</text>
-    <text x="440" y="168" text-anchor="middle" font-size="11" fill="#3B2F1E">Proverbs</text>
-    <text x="440" y="188" text-anchor="middle" font-size="11" fill="#3B2F1E">Ecclesiastes</text>
-    <text x="440" y="208" text-anchor="middle" font-size="11" fill="#3B2F1E">Song of Solomon</text>
-    <text x="440" y="240" text-anchor="middle" font-size="10" fill="#8C6A3F">Worship, suffering,</text>
-    <text x="440" y="255" text-anchor="middle" font-size="10" fill="#8C6A3F">wisdom for living,</text>
-    <text x="440" y="270" text-anchor="middle" font-size="10" fill="#8C6A3F">human experience</text>
+    <g filter="url(#otShadow)">
+      <rect x="185" y="48" width="160" height="324" rx="8" fill="url(#otFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="185" y="48" width="160" height="8" rx="4" fill="#B8924D"/>
+      <circle cx="265" cy="74" r="13" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-scroll" x="258" y="67" width="14" height="14" color="#E8DCC0"/>
+      <text x="265" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">History</text>
+      <text x="265" y="115" text-anchor="middle" font-size="11" fill="#8C6A3F">12 Books</text>
+      <line x1="195" y1="138" x2="335" y2="138" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="265" y="158" text-anchor="middle" font-size="11" fill="#3B2F1E">Joshua</text>
+      <text x="265" y="175" text-anchor="middle" font-size="11" fill="#3B2F1E">Judges &bull; Ruth</text>
+      <text x="265" y="192" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Samuel</text>
+      <text x="265" y="209" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Kings</text>
+      <text x="265" y="226" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Chronicles</text>
+      <text x="265" y="243" text-anchor="middle" font-size="11" fill="#3B2F1E">Ezra &bull; Nehemiah</text>
+      <text x="265" y="260" text-anchor="middle" font-size="11" fill="#3B2F1E">Esther</text>
+      <text x="265" y="286" text-anchor="middle" font-size="10" fill="#8C6A3F">Israel&apos;s history from</text>
+      <text x="265" y="301" text-anchor="middle" font-size="10" fill="#8C6A3F">entering Canaan to</text>
+      <text x="265" y="316" text-anchor="middle" font-size="10" fill="#8C6A3F">the Babylonian exile</text>
+    </g>
 
-    <rect x="535" y="45" width="155" height="320" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="612" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Prophecy</text>
-    <text x="612" y="84" text-anchor="middle" font-size="11" fill="#8C6A3F">17 Books</text>
-    <line x1="545" y1="108" x2="680" y2="108" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="612" y="125" text-anchor="middle" font-size="11" font-weight="600" fill="#3B2F1E">Major (5)</text>
-    <text x="612" y="142" text-anchor="middle" font-size="10" fill="#3B2F1E">Isaiah &bull; Jeremiah</text>
-    <text x="612" y="157" text-anchor="middle" font-size="10" fill="#3B2F1E">Lamentations</text>
-    <text x="612" y="172" text-anchor="middle" font-size="10" fill="#3B2F1E">Ezekiel &bull; Daniel</text>
-    <line x1="545" y1="182" x2="680" y2="182" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="612" y="198" text-anchor="middle" font-size="11" font-weight="600" fill="#3B2F1E">Minor (12)</text>
-    <text x="612" y="214" text-anchor="middle" font-size="10" fill="#3B2F1E">Hosea &bull; Joel &bull; Amos</text>
-    <text x="612" y="229" text-anchor="middle" font-size="10" fill="#3B2F1E">Obadiah &bull; Jonah</text>
-    <text x="612" y="244" text-anchor="middle" font-size="10" fill="#3B2F1E">Micah &bull; Nahum</text>
-    <text x="612" y="259" text-anchor="middle" font-size="10" fill="#3B2F1E">Habakkuk &bull; Zephaniah</text>
-    <text x="612" y="274" text-anchor="middle" font-size="10" fill="#3B2F1E">Haggai &bull; Zechariah</text>
-    <text x="612" y="289" text-anchor="middle" font-size="10" fill="#3B2F1E">Malachi</text>
-    <text x="612" y="320" text-anchor="middle" font-size="10" fill="#8C6A3F">Warning, hope, and</text>
-    <text x="612" y="335" text-anchor="middle" font-size="10" fill="#8C6A3F">the coming Messiah</text>
+    <g filter="url(#otShadow)">
+      <rect x="360" y="48" width="160" height="324" rx="8" fill="url(#otFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="360" y="48" width="160" height="8" rx="4" fill="#B8924D"/>
+      <circle cx="440" cy="74" r="13" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-heart" x="433" y="67" width="14" height="14" color="#E8DCC0"/>
+      <text x="440" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Poetry &amp; Wisdom</text>
+      <text x="440" y="115" text-anchor="middle" font-size="11" fill="#8C6A3F">5 Books</text>
+      <line x1="370" y1="138" x2="510" y2="138" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="440" y="158" text-anchor="middle" font-size="11" fill="#3B2F1E">Job</text>
+      <text x="440" y="178" text-anchor="middle" font-size="11" fill="#3B2F1E">Psalms</text>
+      <text x="440" y="198" text-anchor="middle" font-size="11" fill="#3B2F1E">Proverbs</text>
+      <text x="440" y="218" text-anchor="middle" font-size="11" fill="#3B2F1E">Ecclesiastes</text>
+      <text x="440" y="238" text-anchor="middle" font-size="11" fill="#3B2F1E">Song of Solomon</text>
+      <text x="440" y="268" text-anchor="middle" font-size="10" fill="#8C6A3F">Worship, suffering,</text>
+      <text x="440" y="283" text-anchor="middle" font-size="10" fill="#8C6A3F">wisdom for living,</text>
+      <text x="440" y="298" text-anchor="middle" font-size="10" fill="#8C6A3F">human experience</text>
+    </g>
+
+    <g filter="url(#otShadow)">
+      <rect x="535" y="48" width="155" height="324" rx="8" fill="url(#otFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="535" y="48" width="155" height="8" rx="4" fill="#B8924D"/>
+      <circle cx="612" cy="74" r="13" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-flame" x="605" y="67" width="14" height="14" color="#E8DCC0"/>
+      <text x="612" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Prophecy</text>
+      <text x="612" y="115" text-anchor="middle" font-size="11" fill="#8C6A3F">17 Books</text>
+      <line x1="545" y1="138" x2="680" y2="138" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="612" y="155" text-anchor="middle" font-size="11" font-weight="600" fill="#3B2F1E">Major (5)</text>
+      <text x="612" y="172" text-anchor="middle" font-size="10" fill="#3B2F1E">Isaiah &bull; Jeremiah</text>
+      <text x="612" y="187" text-anchor="middle" font-size="10" fill="#3B2F1E">Lamentations</text>
+      <text x="612" y="202" text-anchor="middle" font-size="10" fill="#3B2F1E">Ezekiel &bull; Daniel</text>
+      <line x1="545" y1="212" x2="680" y2="212" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="612" y="228" text-anchor="middle" font-size="11" font-weight="600" fill="#3B2F1E">Minor (12)</text>
+      <text x="612" y="244" text-anchor="middle" font-size="10" fill="#3B2F1E">Hosea &bull; Joel &bull; Amos</text>
+      <text x="612" y="259" text-anchor="middle" font-size="10" fill="#3B2F1E">Obadiah &bull; Jonah</text>
+      <text x="612" y="274" text-anchor="middle" font-size="10" fill="#3B2F1E">Micah &bull; Nahum</text>
+      <text x="612" y="289" text-anchor="middle" font-size="10" fill="#3B2F1E">Habakkuk &bull; Zephaniah</text>
+      <text x="612" y="304" text-anchor="middle" font-size="10" fill="#3B2F1E">Haggai &bull; Zechariah</text>
+      <text x="612" y="319" text-anchor="middle" font-size="10" fill="#3B2F1E">Malachi</text>
+      <text x="612" y="346" text-anchor="middle" font-size="10" fill="#8C6A3F">Warning, hope, and</text>
+      <text x="612" y="360" text-anchor="middle" font-size="10" fill="#8C6A3F">the coming Messiah</text>
+    </g>
   </svg>
 </div>
 
@@ -209,72 +273,107 @@
 </p>
 
 <!-- NT CATEGORY DIAGRAM -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
-    <text x="350" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#1F3A52">The New Testament &mdash; 27 Books in 5 Categories</text>
+<div class="diagram-card">
+  <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="ntFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fff7e8"/>
+        <stop offset="100%" stop-color="#E8DCC0"/>
+      </linearGradient>
+      <filter id="ntShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#3B2F1E" flood-opacity="0.25"/>
+      </filter>
+    </defs>
 
-    <rect x="10" y="45" width="130" height="280" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="75" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">The Gospels</text>
-    <text x="75" y="84" text-anchor="middle" font-size="10" fill="#8C6A3F">4 Books</text>
-    <line x1="18" y1="92" x2="132" y2="92" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="75" y="112" text-anchor="middle" font-size="11" fill="#3B2F1E">Matthew</text>
-    <text x="75" y="130" text-anchor="middle" font-size="11" fill="#3B2F1E">Mark</text>
-    <text x="75" y="148" text-anchor="middle" font-size="11" fill="#3B2F1E">Luke</text>
-    <text x="75" y="166" text-anchor="middle" font-size="11" fill="#3B2F1E">John</text>
-    <text x="75" y="198" text-anchor="middle" font-size="10" fill="#8C6A3F">Eyewitness</text>
-    <text x="75" y="212" text-anchor="middle" font-size="10" fill="#8C6A3F">accounts of the</text>
-    <text x="75" y="226" text-anchor="middle" font-size="10" fill="#8C6A3F">life, death &amp;</text>
-    <text x="75" y="240" text-anchor="middle" font-size="10" fill="#8C6A3F">resurrection of Jesus</text>
+    <text x="350" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1F3A52">The New Testament &mdash; 27 Books in 5 Categories</text>
 
-    <rect x="155" y="45" width="120" height="280" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="215" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">History</text>
-    <text x="215" y="84" text-anchor="middle" font-size="10" fill="#8C6A3F">1 Book</text>
-    <line x1="163" y1="92" x2="267" y2="92" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="215" y="120" text-anchor="middle" font-size="11" fill="#3B2F1E">Acts of the</text>
-    <text x="215" y="136" text-anchor="middle" font-size="11" fill="#3B2F1E">Apostles</text>
-    <text x="215" y="175" text-anchor="middle" font-size="10" fill="#8C6A3F">The birth and</text>
-    <text x="215" y="189" text-anchor="middle" font-size="10" fill="#8C6A3F">spread of the</text>
-    <text x="215" y="203" text-anchor="middle" font-size="10" fill="#8C6A3F">early church</text>
+    <g filter="url(#ntShadow)">
+      <rect x="10" y="45" width="130" height="284" rx="8" fill="url(#ntFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="10" y="45" width="130" height="7" rx="3.5" fill="#B8924D"/>
+      <circle cx="75" cy="69" r="12" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-book" x="69" y="63" width="12" height="12" color="#E8DCC0"/>
+      <text x="75" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">The Gospels</text>
+      <text x="75" y="107" text-anchor="middle" font-size="10" fill="#8C6A3F">4 Books</text>
+      <line x1="18" y1="115" x2="132" y2="115" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="75" y="133" text-anchor="middle" font-size="11" fill="#3B2F1E">Matthew</text>
+      <text x="75" y="150" text-anchor="middle" font-size="11" fill="#3B2F1E">Mark</text>
+      <text x="75" y="167" text-anchor="middle" font-size="11" fill="#3B2F1E">Luke</text>
+      <text x="75" y="184" text-anchor="middle" font-size="11" fill="#3B2F1E">John</text>
+      <text x="75" y="212" text-anchor="middle" font-size="10" fill="#8C6A3F">Eyewitness</text>
+      <text x="75" y="226" text-anchor="middle" font-size="10" fill="#8C6A3F">accounts of the</text>
+      <text x="75" y="240" text-anchor="middle" font-size="10" fill="#8C6A3F">life, death &amp;</text>
+      <text x="75" y="254" text-anchor="middle" font-size="10" fill="#8C6A3F">resurrection of Jesus</text>
+    </g>
 
-    <rect x="290" y="45" width="145" height="280" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="362" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">Paul&apos;s Letters</text>
-    <text x="362" y="78" text-anchor="middle" font-size="10" fill="#8C6A3F">13 Books</text>
-    <line x1="298" y1="86" x2="427" y2="86" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="362" y="103" text-anchor="middle" font-size="10" font-weight="600" fill="#3B2F1E">To Churches</text>
-    <text x="362" y="118" text-anchor="middle" font-size="10" fill="#3B2F1E">Romans &bull; 1&amp;2 Cor.</text>
-    <text x="362" y="133" text-anchor="middle" font-size="10" fill="#3B2F1E">Galatians &bull; Ephesians</text>
-    <text x="362" y="148" text-anchor="middle" font-size="10" fill="#3B2F1E">Philippians &bull; Col.</text>
-    <text x="362" y="163" text-anchor="middle" font-size="10" fill="#3B2F1E">1&amp;2 Thessalonians</text>
-    <line x1="298" y1="173" x2="427" y2="173" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="362" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#3B2F1E">To Individuals</text>
-    <text x="362" y="204" text-anchor="middle" font-size="10" fill="#3B2F1E">1&amp;2 Timothy &bull; Titus</text>
-    <text x="362" y="219" text-anchor="middle" font-size="10" fill="#3B2F1E">Philemon</text>
-    <text x="362" y="248" text-anchor="middle" font-size="10" fill="#8C6A3F">Doctrine, correction,</text>
-    <text x="362" y="262" text-anchor="middle" font-size="10" fill="#8C6A3F">&amp; instructions for</text>
-    <text x="362" y="276" text-anchor="middle" font-size="10" fill="#8C6A3F">life in the church</text>
+    <g filter="url(#ntShadow)">
+      <rect x="155" y="45" width="120" height="284" rx="8" fill="url(#ntFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="155" y="45" width="120" height="7" rx="3.5" fill="#B8924D"/>
+      <circle cx="215" cy="69" r="12" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-scroll" x="209" y="63" width="12" height="12" color="#E8DCC0"/>
+      <text x="215" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">History</text>
+      <text x="215" y="107" text-anchor="middle" font-size="10" fill="#8C6A3F">1 Book</text>
+      <line x1="163" y1="115" x2="267" y2="115" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="215" y="140" text-anchor="middle" font-size="11" fill="#3B2F1E">Acts of the</text>
+      <text x="215" y="156" text-anchor="middle" font-size="11" fill="#3B2F1E">Apostles</text>
+      <text x="215" y="193" text-anchor="middle" font-size="10" fill="#8C6A3F">The birth and</text>
+      <text x="215" y="207" text-anchor="middle" font-size="10" fill="#8C6A3F">spread of the</text>
+      <text x="215" y="221" text-anchor="middle" font-size="10" fill="#8C6A3F">early church</text>
+    </g>
 
-    <rect x="450" y="45" width="130" height="280" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="515" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">General Letters</text>
-    <text x="515" y="78" text-anchor="middle" font-size="10" fill="#8C6A3F">8 Books</text>
-    <line x1="458" y1="86" x2="572" y2="86" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="515" y="106" text-anchor="middle" font-size="11" fill="#3B2F1E">Hebrews</text>
-    <text x="515" y="123" text-anchor="middle" font-size="11" fill="#3B2F1E">James</text>
-    <text x="515" y="140" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Peter</text>
-    <text x="515" y="157" text-anchor="middle" font-size="11" fill="#3B2F1E">1, 2 &amp; 3 John</text>
-    <text x="515" y="174" text-anchor="middle" font-size="11" fill="#3B2F1E">Jude</text>
-    <text x="515" y="210" text-anchor="middle" font-size="10" fill="#8C6A3F">Letters to the</text>
-    <text x="515" y="224" text-anchor="middle" font-size="10" fill="#8C6A3F">broader church</text>
-    <text x="515" y="238" text-anchor="middle" font-size="10" fill="#8C6A3F">on faith &amp; life</text>
+    <g filter="url(#ntShadow)">
+      <rect x="290" y="45" width="145" height="284" rx="8" fill="url(#ntFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="290" y="45" width="145" height="7" rx="3.5" fill="#B8924D"/>
+      <circle cx="362" cy="65" r="12" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-quill" x="356" y="59" width="12" height="12" color="#E8DCC0"/>
+      <text x="362" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">Paul&apos;s Letters</text>
+      <text x="362" y="103" text-anchor="middle" font-size="10" fill="#8C6A3F">13 Books</text>
+      <line x1="298" y1="111" x2="427" y2="111" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="362" y="128" text-anchor="middle" font-size="10" font-weight="600" fill="#3B2F1E">To Churches</text>
+      <text x="362" y="143" text-anchor="middle" font-size="10" fill="#3B2F1E">Romans &bull; 1&amp;2 Cor.</text>
+      <text x="362" y="158" text-anchor="middle" font-size="10" fill="#3B2F1E">Galatians &bull; Ephesians</text>
+      <text x="362" y="173" text-anchor="middle" font-size="10" fill="#3B2F1E">Philippians &bull; Col.</text>
+      <text x="362" y="188" text-anchor="middle" font-size="10" fill="#3B2F1E">1&amp;2 Thessalonians</text>
+      <line x1="298" y1="198" x2="427" y2="198" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="362" y="214" text-anchor="middle" font-size="10" font-weight="600" fill="#3B2F1E">To Individuals</text>
+      <text x="362" y="229" text-anchor="middle" font-size="10" fill="#3B2F1E">1&amp;2 Timothy &bull; Titus</text>
+      <text x="362" y="244" text-anchor="middle" font-size="10" fill="#3B2F1E">Philemon</text>
+      <text x="362" y="270" text-anchor="middle" font-size="10" fill="#8C6A3F">Doctrine, correction,</text>
+      <text x="362" y="284" text-anchor="middle" font-size="10" fill="#8C6A3F">&amp; instructions for</text>
+      <text x="362" y="298" text-anchor="middle" font-size="10" fill="#8C6A3F">life in the church</text>
+    </g>
 
-    <rect x="595" y="45" width="100" height="280" rx="6" fill="#E8DCC0" stroke="#1F3A52" stroke-width="1.5"/>
-    <text x="645" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">Prophecy</text>
-    <text x="645" y="78" text-anchor="middle" font-size="10" fill="#8C6A3F">1 Book</text>
-    <line x1="603" y1="86" x2="687" y2="86" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
-    <text x="645" y="115" text-anchor="middle" font-size="11" fill="#3B2F1E">Revelation</text>
-    <text x="645" y="175" text-anchor="middle" font-size="10" fill="#8C6A3F">The return</text>
-    <text x="645" y="189" text-anchor="middle" font-size="10" fill="#8C6A3F">of Christ &amp;</text>
-    <text x="645" y="203" text-anchor="middle" font-size="10" fill="#8C6A3F">the end of</text>
-    <text x="645" y="217" text-anchor="middle" font-size="10" fill="#8C6A3F">all things</text>
+    <g filter="url(#ntShadow)">
+      <rect x="450" y="45" width="130" height="284" rx="8" fill="url(#ntFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="450" y="45" width="130" height="7" rx="3.5" fill="#B8924D"/>
+      <circle cx="515" cy="65" r="12" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-scroll" x="509" y="59" width="12" height="12" color="#E8DCC0"/>
+      <text x="515" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">General Letters</text>
+      <text x="515" y="103" text-anchor="middle" font-size="10" fill="#8C6A3F">8 Books</text>
+      <line x1="458" y1="111" x2="572" y2="111" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="515" y="129" text-anchor="middle" font-size="11" fill="#3B2F1E">Hebrews</text>
+      <text x="515" y="146" text-anchor="middle" font-size="11" fill="#3B2F1E">James</text>
+      <text x="515" y="163" text-anchor="middle" font-size="11" fill="#3B2F1E">1 &amp; 2 Peter</text>
+      <text x="515" y="180" text-anchor="middle" font-size="11" fill="#3B2F1E">1, 2 &amp; 3 John</text>
+      <text x="515" y="197" text-anchor="middle" font-size="11" fill="#3B2F1E">Jude</text>
+      <text x="515" y="225" text-anchor="middle" font-size="10" fill="#8C6A3F">Letters to the</text>
+      <text x="515" y="239" text-anchor="middle" font-size="10" fill="#8C6A3F">broader church</text>
+      <text x="515" y="253" text-anchor="middle" font-size="10" fill="#8C6A3F">on faith &amp; life</text>
+    </g>
+
+    <g filter="url(#ntShadow)">
+      <rect x="595" y="45" width="100" height="284" rx="8" fill="url(#ntFill)" stroke="#1F3A52" stroke-width="1.2"/>
+      <rect x="595" y="45" width="100" height="7" rx="3.5" fill="#B8924D"/>
+      <circle cx="645" cy="65" r="12" fill="#1F3A52"/>
+      <use href="assets/icons.svg#icon-flame" x="639" y="59" width="12" height="12" color="#E8DCC0"/>
+      <text x="645" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A52">Prophecy</text>
+      <text x="645" y="103" text-anchor="middle" font-size="10" fill="#8C6A3F">1 Book</text>
+      <line x1="603" y1="111" x2="687" y2="111" stroke="#8C6A3F" stroke-width="0.5" opacity="0.5"/>
+      <text x="645" y="138" text-anchor="middle" font-size="11" fill="#3B2F1E">Revelation</text>
+      <text x="645" y="193" text-anchor="middle" font-size="10" fill="#8C6A3F">The return</text>
+      <text x="645" y="207" text-anchor="middle" font-size="10" fill="#8C6A3F">of Christ &amp;</text>
+      <text x="645" y="221" text-anchor="middle" font-size="10" fill="#8C6A3F">the end of</text>
+      <text x="645" y="235" text-anchor="middle" font-size="10" fill="#8C6A3F">all things</text>
+    </g>
   </svg>
 </div>
 
@@ -340,38 +439,66 @@
 <h2>One Story, Beginning to End</h2>
 
 <!-- STORY ARC -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+<div class="diagram-card">
+  <svg viewBox="0 0 700 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
     <defs>
-      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-        <polygon points="0 0, 8 3, 0 6" fill="#1F3A52"/>
+      <marker id="arrowhead" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+        <polygon points="0 0, 9 3.5, 0 7" fill="#1F3A52"/>
       </marker>
+      <linearGradient id="arcLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#8C6A3F"/>
+        <stop offset="55%" stop-color="#1F3A52"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </linearGradient>
+      <radialGradient id="nodeFill" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#B8924D"/>
+        <stop offset="100%" stop-color="#8C6A3F"/>
+      </radialGradient>
+      <radialGradient id="nodeFillKey" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#2C4F6E"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </radialGradient>
+      <filter id="nodeShadow" x="-80%" y="-80%" width="260%" height="260%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#3B2F1E" flood-opacity="0.35"/>
+      </filter>
     </defs>
-    <line x1="30" y1="60" x2="665" y2="60" stroke="#1F3A52" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="30" y1="65" x2="665" y2="65" stroke="url(#arcLine)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowhead)"/>
 
-    <circle cx="60" cy="60" r="8" fill="#8C6A3F"/>
-    <text x="60" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Creation</text>
-    <text x="60" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Genesis 1</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="60" cy="65" r="9" fill="url(#nodeFill)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="60" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Creation</text>
+    <text x="60" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Genesis 1</text>
 
-    <circle cx="165" cy="60" r="8" fill="#8C6A3F"/>
-    <text x="165" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">The Fall</text>
-    <text x="165" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Genesis 3</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="165" cy="65" r="9" fill="url(#nodeFill)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="165" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">The Fall</text>
+    <text x="165" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Genesis 3</text>
 
-    <circle cx="280" cy="60" r="8" fill="#8C6A3F"/>
-    <text x="280" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Promise</text>
-    <text x="280" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Abraham &amp; Prophets</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="280" cy="65" r="9" fill="url(#nodeFill)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="280" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Promise</text>
+    <text x="280" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Abraham &amp; Prophets</text>
 
-    <circle cx="400" cy="60" r="9" fill="#1F3A52"/>
-    <text x="400" y="42" text-anchor="middle" font-size="10" font-weight="700" fill="#1F3A52">Fulfillment</text>
-    <text x="400" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Jesus Christ</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="400" cy="65" r="12" fill="url(#nodeFillKey)" stroke="#fff" stroke-width="1.4" stroke-opacity="0.7"/>
+    </g>
+    <text x="400" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#1F3A52">Fulfillment</text>
+    <text x="400" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">Jesus Christ</text>
 
-    <circle cx="510" cy="60" r="8" fill="#8C6A3F"/>
-    <text x="510" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">The Church</text>
-    <text x="510" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Acts &ndash; Epistles</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="510" cy="65" r="9" fill="url(#nodeFill)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="510" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">The Church</text>
+    <text x="510" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Acts &ndash; Epistles</text>
 
-    <circle cx="630" cy="60" r="8" fill="#8C6A3F"/>
-    <text x="630" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Restoration</text>
-    <text x="630" y="85" text-anchor="middle" font-size="9" fill="#8C6A3F">Revelation</text>
+    <g filter="url(#nodeShadow)">
+      <circle cx="630" cy="65" r="9" fill="url(#nodeFill)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="630" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Restoration</text>
+    <text x="630" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Revelation</text>
   </svg>
 </div>
 
@@ -446,31 +573,57 @@
 </p>
 
 <!-- DSS TIMELINE -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+<div class="diagram-card">
+  <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="dssLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1F3A52"/>
+        <stop offset="65%" stop-color="#1F3A52"/>
+        <stop offset="100%" stop-color="#8C6A3F"/>
+      </linearGradient>
+      <radialGradient id="dssNode" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#2C4F6E"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </radialGradient>
+      <radialGradient id="dssNodeGold" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#B8924D"/>
+        <stop offset="100%" stop-color="#8C6A3F"/>
+      </radialGradient>
+      <filter id="dssShadow" x="-80%" y="-80%" width="260%" height="260%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#3B2F1E" flood-opacity="0.35"/>
+      </filter>
+    </defs>
+
     <text x="350" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Old Testament Manuscript Timeline</text>
 
-    <line x1="40" y1="70" x2="660" y2="70" stroke="#1F3A52" stroke-width="2"/>
+    <line x1="40" y1="75" x2="660" y2="75" stroke="url(#dssLine)" stroke-width="3" stroke-linecap="round"/>
 
-    <circle cx="120" cy="70" r="7" fill="#1F3A52"/>
-    <text x="120" y="50" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Dead Sea Scrolls</text>
-    <text x="120" y="37" text-anchor="middle" font-size="9" fill="#8C6A3F">250 BC &ndash; AD 68</text>
-    <text x="120" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Discovered 1947</text>
+    <g filter="url(#dssShadow)">
+      <circle cx="120" cy="75" r="7.5" fill="url(#dssNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="120" y="53" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Dead Sea Scrolls</text>
+    <text x="120" y="40" text-anchor="middle" font-size="9" fill="#8C6A3F">250 BC &ndash; AD 68</text>
+    <text x="120" y="96" text-anchor="middle" font-size="9" fill="#8C6A3F">Discovered 1947</text>
 
-    <line x1="127" y1="70" x2="433" y2="70" stroke="#8C6A3F" stroke-width="3" stroke-dasharray="6,4" opacity="0.6"/>
-    <text x="280" y="115" text-anchor="middle" font-size="10" fill="#8C6A3F">~1,000 years &mdash; 95%+ identical text</text>
-    <line x1="120" y1="102" x2="440" y2="102" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
-    <line x1="120" y1="98" x2="120" y2="106" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
-    <line x1="440" y1="98" x2="440" y2="106" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
+    <rect x="127" y="108" width="306" height="20" rx="10" fill="#fff7e8" stroke="#8C6A3F" stroke-width="1" opacity="0.9"/>
+    <line x1="127" y1="75" x2="433" y2="75" stroke="#8C6A3F" stroke-width="3" stroke-dasharray="6,4" opacity="0.55"/>
+    <text x="280" y="121" text-anchor="middle" font-size="10" font-weight="600" fill="#8C6A3F">~1,000 years &mdash; 95%+ identical text</text>
+    <line x1="120" y1="107" x2="440" y2="107" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
+    <line x1="120" y1="103" x2="120" y2="111" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
+    <line x1="440" y1="103" x2="440" y2="111" stroke="#8C6A3F" stroke-width="1" opacity="0.5"/>
 
-    <circle cx="440" cy="70" r="7" fill="#1F3A52"/>
-    <text x="440" y="50" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Masoretic Text</text>
-    <text x="440" y="37" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 1000</text>
-    <text x="440" y="90" text-anchor="middle" font-size="9" fill="#8C6A3F">Oldest prev. known</text>
+    <g filter="url(#dssShadow)">
+      <circle cx="440" cy="75" r="7.5" fill="url(#dssNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="440" y="53" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Masoretic Text</text>
+    <text x="440" y="40" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 1000</text>
+    <text x="440" y="96" text-anchor="middle" font-size="9" fill="#8C6A3F">Oldest prev. known</text>
 
-    <circle cx="630" cy="70" r="7" fill="#8C6A3F"/>
-    <text x="630" y="50" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Your Bible</text>
-    <text x="630" y="37" text-anchor="middle" font-size="9" fill="#8C6A3F">Today</text>
+    <g filter="url(#dssShadow)">
+      <circle cx="630" cy="75" r="7.5" fill="url(#dssNodeGold)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="630" y="53" text-anchor="middle" font-size="10" font-weight="600" fill="#1F3A52">Your Bible</text>
+    <text x="630" y="40" text-anchor="middle" font-size="9" fill="#8C6A3F">Today</text>
   </svg>
 </div>
 
@@ -483,36 +636,62 @@
 </p>
 
 <!-- MANUSCRIPT COMPARISON BAR CHART -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+<div class="diagram-card">
+  <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="barFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#A6814F"/>
+        <stop offset="100%" stop-color="#6E5230"/>
+      </linearGradient>
+      <linearGradient id="barFillKey" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2C4F6E"/>
+        <stop offset="100%" stop-color="#15293A"/>
+      </linearGradient>
+      <filter id="barShadow" x="-30%" y="-15%" width="160%" height="135%">
+        <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#3B2F1E" flood-opacity="0.3"/>
+      </filter>
+    </defs>
+
     <text x="350" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">Ancient Manuscript Comparison: Surviving Copies</text>
 
-    <rect x="60" y="228" width="16" height="20" fill="#8C6A3F"/>
-    <text x="68" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Caesar</text>
-    <text x="68" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">10 copies</text>
-
-    <rect x="125" y="223" width="16" height="25" fill="#8C6A3F"/>
-    <text x="133" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Plato</text>
-    <text x="133" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">7 copies</text>
-
-    <rect x="195" y="220" width="16" height="28" fill="#8C6A3F"/>
-    <text x="203" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Herodotus</text>
-    <text x="203" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">8 copies</text>
-
-    <rect x="275" y="218" width="16" height="30" fill="#8C6A3F"/>
-    <text x="283" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Tacitus</text>
-    <text x="283" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">20 copies</text>
-
-    <rect x="350" y="160" width="30" height="88" fill="#8C6A3F"/>
-    <text x="365" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Homer&apos;s Iliad</text>
-    <text x="365" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">1,900 copies</text>
-
-    <rect x="450" y="38" width="60" height="210" fill="#1F3A52"/>
-    <text x="480" y="260" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">New Testament</text>
-    <text x="480" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">24,000+ copies</text>
-    <text x="480" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#1F3A52">24,000+</text>
-
     <line x1="40" y1="248" x2="660" y2="248" stroke="#8C6A3F" stroke-width="1" opacity="0.4"/>
+
+    <g filter="url(#barShadow)">
+      <rect x="60" y="228" width="18" height="20" rx="4" fill="url(#barFill)"/>
+    </g>
+    <text x="69" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Caesar</text>
+    <text x="69" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">10 copies</text>
+
+    <g filter="url(#barShadow)">
+      <rect x="125" y="223" width="18" height="25" rx="4" fill="url(#barFill)"/>
+    </g>
+    <text x="134" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Plato</text>
+    <text x="134" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">7 copies</text>
+
+    <g filter="url(#barShadow)">
+      <rect x="195" y="220" width="18" height="28" rx="4" fill="url(#barFill)"/>
+    </g>
+    <text x="204" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Herodotus</text>
+    <text x="204" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">8 copies</text>
+
+    <g filter="url(#barShadow)">
+      <rect x="275" y="218" width="18" height="30" rx="4" fill="url(#barFill)"/>
+    </g>
+    <text x="284" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Tacitus</text>
+    <text x="284" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">20 copies</text>
+
+    <g filter="url(#barShadow)">
+      <rect x="350" y="160" width="32" height="88" rx="5" fill="url(#barFill)"/>
+    </g>
+    <text x="366" y="260" text-anchor="middle" font-size="9" fill="#3B2F1E">Homer&apos;s Iliad</text>
+    <text x="366" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">1,900 copies</text>
+
+    <g filter="url(#barShadow)">
+      <rect x="450" y="38" width="62" height="210" rx="6" fill="url(#barFillKey)" stroke="#B8924D" stroke-width="1.5"/>
+    </g>
+    <text x="481" y="260" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">New Testament</text>
+    <text x="481" y="272" text-anchor="middle" font-size="9" fill="#8C6A3F">24,000+ copies</text>
+    <text x="481" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#1F3A52">24,000+</text>
   </svg>
 </div>
 
@@ -538,41 +717,70 @@
 </p>
 
 <!-- EARLY NT EVIDENCE TIMELINE -->
-<div style="margin: 2em 0; overflow-x: auto;">
-  <svg viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+<div class="diagram-card">
+  <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+    <defs>
+      <linearGradient id="ntlLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#8C6A3F"/>
+        <stop offset="80%" stop-color="#1F3A52"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </linearGradient>
+      <radialGradient id="ntlNode" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#B8924D"/>
+        <stop offset="100%" stop-color="#8C6A3F"/>
+      </radialGradient>
+      <radialGradient id="ntlNodeKey" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#2C4F6E"/>
+        <stop offset="100%" stop-color="#1F3A52"/>
+      </radialGradient>
+      <filter id="ntlShadow" x="-80%" y="-80%" width="260%" height="260%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#3B2F1E" flood-opacity="0.35"/>
+      </filter>
+    </defs>
+
     <text x="350" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3A52">How Quickly the New Testament Was Recorded &amp; Confirmed</text>
 
-    <line x1="30" y1="75" x2="670" y2="75" stroke="#1F3A52" stroke-width="2"/>
+    <line x1="30" y1="80" x2="670" y2="80" stroke="url(#ntlLine)" stroke-width="3" stroke-linecap="round"/>
 
-    <circle cx="70" cy="75" r="6" fill="#8C6A3F"/>
-    <text x="70" y="58" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Jesus</text>
-    <text x="70" y="48" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 30</text>
-    <text x="70" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">Crucifixion &amp;</text>
-    <text x="70" y="104" text-anchor="middle" font-size="9" fill="#8C6A3F">Resurrection</text>
+    <g filter="url(#ntlShadow)">
+      <circle cx="70" cy="80" r="6.5" fill="url(#ntlNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="70" y="62" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Jesus</text>
+    <text x="70" y="51" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 30</text>
+    <text x="70" y="98" text-anchor="middle" font-size="9" fill="#8C6A3F">Crucifixion &amp;</text>
+    <text x="70" y="111" text-anchor="middle" font-size="9" fill="#8C6A3F">Resurrection</text>
 
-    <circle cx="200" cy="75" r="6" fill="#8C6A3F"/>
-    <text x="200" y="58" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Paul&apos;s Letters</text>
-    <text x="200" y="48" text-anchor="middle" font-size="9" fill="#8C6A3F">AD 48&ndash;65</text>
-    <text x="200" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">Written within living</text>
-    <text x="200" y="104" text-anchor="middle" font-size="9" fill="#8C6A3F">memory of Jesus</text>
+    <g filter="url(#ntlShadow)">
+      <circle cx="200" cy="80" r="6.5" fill="url(#ntlNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="200" y="62" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Paul&apos;s Letters</text>
+    <text x="200" y="51" text-anchor="middle" font-size="9" fill="#8C6A3F">AD 48&ndash;65</text>
+    <text x="200" y="98" text-anchor="middle" font-size="9" fill="#8C6A3F">Written within living</text>
+    <text x="200" y="111" text-anchor="middle" font-size="9" fill="#8C6A3F">memory of Jesus</text>
 
-    <circle cx="340" cy="75" r="6" fill="#8C6A3F"/>
-    <text x="340" y="58" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">The Gospels</text>
-    <text x="340" y="48" text-anchor="middle" font-size="9" fill="#8C6A3F">AD 60&ndash;95</text>
-    <text x="340" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">Eyewitnesses still alive</text>
-    <text x="340" y="104" text-anchor="middle" font-size="9" fill="#8C6A3F">when written</text>
+    <g filter="url(#ntlShadow)">
+      <circle cx="340" cy="80" r="6.5" fill="url(#ntlNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="340" y="62" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">The Gospels</text>
+    <text x="340" y="51" text-anchor="middle" font-size="9" fill="#8C6A3F">AD 60&ndash;95</text>
+    <text x="340" y="98" text-anchor="middle" font-size="9" fill="#8C6A3F">Eyewitnesses still alive</text>
+    <text x="340" y="111" text-anchor="middle" font-size="9" fill="#8C6A3F">when written</text>
 
-    <circle cx="470" cy="75" r="6" fill="#8C6A3F"/>
-    <text x="470" y="58" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Earliest Fragment</text>
-    <text x="470" y="48" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 125</text>
-    <text x="470" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">Rylands Papyrus P52</text>
-    <text x="470" y="104" text-anchor="middle" font-size="9" fill="#8C6A3F">Fragment of John&apos;s Gospel</text>
+    <g filter="url(#ntlShadow)">
+      <circle cx="470" cy="80" r="6.5" fill="url(#ntlNode)" stroke="#fff" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+    <text x="470" y="62" text-anchor="middle" font-size="9" font-weight="600" fill="#1F3A52">Earliest Fragment</text>
+    <text x="470" y="51" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 125</text>
+    <text x="470" y="98" text-anchor="middle" font-size="9" fill="#8C6A3F">Rylands Papyrus P52</text>
+    <text x="470" y="111" text-anchor="middle" font-size="9" fill="#8C6A3F">Fragment of John&apos;s Gospel</text>
 
-    <circle cx="610" cy="75" r="6" fill="#1F3A52"/>
-    <text x="610" y="58" text-anchor="middle" font-size="9" font-weight="700" fill="#1F3A52">Canon Confirmed</text>
-    <text x="610" y="48" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 367&ndash;397</text>
-    <text x="610" y="92" text-anchor="middle" font-size="9" fill="#8C6A3F">27 books formally</text>
-    <text x="610" y="104" text-anchor="middle" font-size="9" fill="#8C6A3F">recognized by the church</text>
+    <g filter="url(#ntlShadow)">
+      <circle cx="610" cy="80" r="8" fill="url(#ntlNodeKey)" stroke="#fff" stroke-width="1.2" stroke-opacity="0.7"/>
+    </g>
+    <text x="610" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#1F3A52">Canon Confirmed</text>
+    <text x="610" y="49" text-anchor="middle" font-size="9" fill="#8C6A3F">~AD 367&ndash;397</text>
+    <text x="610" y="100" text-anchor="middle" font-size="9" fill="#8C6A3F">27 books formally</text>
+    <text x="610" y="113" text-anchor="middle" font-size="9" fill="#8C6A3F">recognized by the church</text>
   </svg>
 </div>
 

@@ -32,4 +32,28 @@
     <path d="M5 12h14"/>
     <path d="M13 6l6 6-6 6"/>
   </symbol>
+  <symbol id="icon-scroll" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 4.5a2 2 0 0 0-2 2v11a2 2 0 1 0 4 0v-13"/>
+    <path d="M7 4.5h11a2 2 0 0 1 2 2v2"/>
+    <path d="M9 17.5h11a2 2 0 0 0 2-2v-1"/>
+    <path d="M9 9h8"/>
+    <path d="M9 12.5h8"/>
+  </symbol>
+  <symbol id="icon-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21c4 0 6.5-2.6 6.5-6 0-2.2-1.1-3.6-2-5-.2 1.4-1 2.3-1.8 2.3.6-2.6-.6-5-3-6.8-.4 1.9-1.3 3-2.6 4C7.4 11 6 12.6 6 15c0 3.4 2 6 6 6Z"/>
+  </symbol>
+  <symbol id="icon-quill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 4c-5 0-12 3-14.5 11.5C4.8 17 4 19 3 20"/>
+    <path d="M20 4c0 5-3 12-11.5 14.5"/>
+    <path d="M9.5 14.5 14 10"/>
+  </symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.5"/>
+    <path d="M12 7.5V12l3.2 2"/>
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.5"/>
+    <path d="M3.5 12h17"/>
+    <path d="M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/>
+  </symbol>
 </svg>

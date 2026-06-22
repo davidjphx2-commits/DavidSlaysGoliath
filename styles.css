@@ -284,6 +284,28 @@ main ul:not(.topic-grid) li {
   margin-bottom: 6px;
 }
 
+/* ---------- Diagram / chart panels ---------- */
+
+.diagram-card {
+  margin: 2em 0;
+  padding: 18px 14px 10px;
+  background: linear-gradient(180deg, #fff7e8, var(--sand));
+  border: 1px solid rgba(140, 106, 63, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md), var(--shadow-inset);
+  overflow-x: auto;
+}
+
+.diagram-card svg {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .diagram-card {
+    padding: 14px 10px 6px;
+  }
+}
+
 /* ---------- Topic cards (homepage) ---------- */
 
 .topic-grid {
