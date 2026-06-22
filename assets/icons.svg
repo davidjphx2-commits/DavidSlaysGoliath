@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 11.5 12 4l9 7.5"/>
+    <path d="M5.5 10v9.5a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1V16a2 2 0 0 1 4 0v3.5a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1V10"/>
+  </symbol>
+  <symbol id="icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v18"/>
+    <path d="M6.5 8h11"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 6.5c-1.6-1.2-4-1.8-6.5-1.8a1 1 0 0 0-1 1v11.6a1 1 0 0 0 1 1c2.5 0 4.9.6 6.5 1.8 1.6-1.2 4-1.8 6.5-1.8a1 1 0 0 0 1-1V5.7a1 1 0 0 0-1-1c-2.5 0-4.9.6-6.5 1.8Z"/>
+    <path d="M12 6.5v13"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.5" cy="10.5" r="6.5"/>
+    <path d="M19.5 19.5 15 15"/>
+  </symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20.2s-7.3-4.4-9.6-9C.9 7.6 2.7 4 6.3 4c2 0 3.6 1.2 5.7 3.7C14.1 5.2 15.7 4 17.7 4c3.6 0 5.4 3.6 3.9 7.2-2.3 4.6-9.6 9-9.6 9Z"/>
+  </symbol>
+  <symbol id="icon-church" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v3"/>
+    <path d="M10.3 4.7h3.4"/>
+    <path d="M4 21V12L12 6l8 6v9"/>
+    <path d="M9.5 21v-5a2.5 2.5 0 0 1 5 0v5"/>
+    <path d="M4 21h16"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14"/>
+    <path d="M13 6l6 6-6 6"/>
+  </symbol>
+</svg>

@@ -11,14 +11,17 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="site-title" href="index.html">David Slays Goliath</a>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="gospel.html">The Gospel</a></li>
-        <li><a href="what-is-the-bible.html">What Is the Bible?</a></li>
-        <li><a href="studying-the-bible.html">Studying the Bible</a></li>
-        <li><a href="christian-life.html">Christian Life</a></li>
-        <li><a href="finding-a-church.html">Finding a Church</a></li>
+        <li><a href="index.html" class="active"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-home"/></svg><span>Home</span></a></li>
+        <li><a href="gospel.html"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-cross"/></svg><span>The Gospel</span></a></li>
+        <li><a href="what-is-the-bible.html"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-book"/></svg><span>What Is the Bible?</span></a></li>
+        <li><a href="studying-the-bible.html"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-search"/></svg><span>Studying the Bible</span></a></li>
+        <li><a href="christian-life.html"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-heart"/></svg><span>Christian Life</span></a></li>
+        <li><a href="finding-a-church.html"><svg class="nav-icon" aria-hidden="true"><use href="assets/icons.svg#icon-church"/></svg><span>Finding a Church</span></a></li>
       </ul>
     </nav>
   </div>
@@ -35,13 +38,58 @@
 
   <p>David faced Goliath with nothing but a sling, five stones, and an unshakable confidence that the battle belonged to the Lord. This site exists for the same kind of fight &mdash; for clear, doctrinally grounded answers about who God is, what the Gospel actually says, and how to live out the Christian life with conviction.</p>
 
-  <p>Start here:</p>
-  <ul>
-    <li><a href="gospel.html">The Gospel</a> &mdash; what it means to be saved</li>
-    <li><a href="what-is-the-bible.html">What Is the Bible?</a> &mdash; where it came from, why it matters</li>
-    <li><a href="studying-the-bible.html">How to Study the Bible</a> &mdash; for the new believer</li>
-    <li><a href="christian-life.html">Living the Christian Life</a> &mdash; discipleship, day to day</li>
-    <li><a href="finding-a-church.html">Finding a Good Church</a> &mdash; what to look for, what to avoid</li>
+  <p class="start-label">Start here:</p>
+  <ul class="topic-grid">
+    <li class="topic-card">
+      <a href="gospel.html">
+        <span class="topic-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-cross"/></svg></span>
+        <span class="topic-text">
+          <span class="topic-title">The Gospel</span>
+          <span class="topic-desc">What it means to be saved</span>
+        </span>
+        <svg class="topic-arrow" aria-hidden="true"><use href="assets/icons.svg#icon-arrow"/></svg>
+      </a>
+    </li>
+    <li class="topic-card">
+      <a href="what-is-the-bible.html">
+        <span class="topic-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-book"/></svg></span>
+        <span class="topic-text">
+          <span class="topic-title">What Is the Bible?</span>
+          <span class="topic-desc">Where it came from, why it matters</span>
+        </span>
+        <svg class="topic-arrow" aria-hidden="true"><use href="assets/icons.svg#icon-arrow"/></svg>
+      </a>
+    </li>
+    <li class="topic-card">
+      <a href="studying-the-bible.html">
+        <span class="topic-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-search"/></svg></span>
+        <span class="topic-text">
+          <span class="topic-title">How to Study the Bible</span>
+          <span class="topic-desc">For the new believer</span>
+        </span>
+        <svg class="topic-arrow" aria-hidden="true"><use href="assets/icons.svg#icon-arrow"/></svg>
+      </a>
+    </li>
+    <li class="topic-card">
+      <a href="christian-life.html">
+        <span class="topic-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-heart"/></svg></span>
+        <span class="topic-text">
+          <span class="topic-title">Living the Christian Life</span>
+          <span class="topic-desc">Discipleship, day to day</span>
+        </span>
+        <svg class="topic-arrow" aria-hidden="true"><use href="assets/icons.svg#icon-arrow"/></svg>
+      </a>
+    </li>
+    <li class="topic-card">
+      <a href="finding-a-church.html">
+        <span class="topic-icon"><svg aria-hidden="true"><use href="assets/icons.svg#icon-church"/></svg></span>
+        <span class="topic-text">
+          <span class="topic-title">Finding a Good Church</span>
+          <span class="topic-desc">What to look for, what to avoid</span>
+        </span>
+        <svg class="topic-arrow" aria-hidden="true"><use href="assets/icons.svg#icon-arrow"/></svg>
+      </a>
+    </li>
   </ul>
 </main>
 
@@ -49,5 +97,6 @@
   &copy; 2026 David Slays Goliath
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>

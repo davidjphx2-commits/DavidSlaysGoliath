@@ -2,8 +2,21 @@
   --sand: #D9C9A3;
   --sand-light: #E8DCC0;
   --dusk-blue: #1F3A52;
+  --dusk-blue-light: #2C4F6E;
   --bronze: #8C6A3F;
+  --gold: #B8924D;
   --ink: #3B2F1E;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(31, 22, 8, 0.12), 0 1px 1px rgba(31, 22, 8, 0.08);
+  --shadow-md: 0 6px 16px rgba(31, 22, 8, 0.16), 0 2px 6px rgba(31, 22, 8, 0.1);
+  --shadow-lg: 0 18px 40px rgba(31, 22, 8, 0.22), 0 6px 14px rgba(31, 22, 8, 0.12);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 * {
@@ -12,107 +25,14 @@
 
 body {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: var(--ink);
-  background: var(--sand-light);
-  line-height: 1.7;
-}
-
-body, p, li {
   font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--sand) radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.25), transparent 55%);
+  line-height: 1.7;
 }
 
 h1, h2, h3, .headline {
   font-family: Georgia, 'Times New Roman', serif;
-}
-
-header.site-header {
-  background: var(--dusk-blue);
-  padding: 18px 24px;
-}
-
-.site-header .header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.site-title {
-  color: var(--sand-light);
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav.site-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-nav.site-nav a {
-  color: var(--sand-light);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-nav.site-nav a:hover,
-nav.site-nav a.active {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-}
-
-.hero {
-  background-image: linear-gradient(rgba(31, 58, 82, 0.55), rgba(31, 58, 82, 0.55)), url("assets/hero-david-goliath.jpg");
-  background-size: cover;
-  background-position: center 20%;
-  padding: 90px 24px;
-  text-align: center;
-}
-
-.hero .headline {
-  font-size: 34px;
-  margin: 0 0 6px;
-  color: var(--sand-light);
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.hero .subtitle {
-  font-size: 18px;
-  color: var(--sand-light);
-  margin: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-
-.hero .credit {
-  display: block;
-  margin-top: 14px;
-  font-size: 11px;
-  color: var(--sand-light);
-  opacity: 0.75;
-}
-
-.page-title {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.page-intro {
-  color: var(--bronze);
-  font-style: italic;
-  margin-top: 0;
 }
 
 a {
@@ -123,18 +43,363 @@ a:hover {
   text-decoration: none;
 }
 
+/* ---------- Header / Nav ---------- */
+
+header.site-header {
+  background: linear-gradient(180deg, var(--dusk-blue-light), var(--dusk-blue));
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s var(--ease);
+}
+
+header.site-header.is-scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.site-header .header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+}
+
+.site-title {
+  color: var(--sand-light);
+  font-size: 19px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hamburger toggle (mobile only) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--sand-light);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.site-nav a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--sand-light);
+  text-decoration: none;
+  font-size: 14.5px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: background 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.15s var(--ease);
+}
+
+nav.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-inset);
+}
+
+nav.site-nav a.active {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  box-shadow: var(--shadow-sm), var(--shadow-inset);
+  font-weight: 600;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav.site-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    background: var(--dusk-blue);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.25s var(--ease), opacity 0.2s var(--ease), transform 0.25s var(--ease);
+  }
+
+  nav.site-nav.open {
+    max-height: 360px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav.site-nav ul {
+    flex-direction: column;
+  }
+
+  nav.site-nav a {
+    padding: 11px 14px;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background-image: linear-gradient(rgba(31, 58, 82, 0.6), rgba(31, 58, 82, 0.55)), url("assets/hero-david-goliath.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  padding: 100px 24px 120px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);
+}
+
+.hero .headline {
+  font-size: 36px;
+  margin: 0 0 8px;
+  color: var(--sand-light);
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero .subtitle {
+  font-size: 18px;
+  color: var(--sand-light);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero .credit {
+  display: block;
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--sand-light);
+  opacity: 0.75;
+}
+
+/* ---------- Main content card ---------- */
+
+main {
+  max-width: 760px;
+  margin: 40px auto 60px;
+  padding: 44px 36px 56px;
+  position: relative;
+  background: var(--sand-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero + main {
+  margin-top: -36px;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.page-intro,
+.start-label {
+  color: var(--bronze);
+  font-style: italic;
+  margin-top: 0;
+}
+
+main h2 {
+  margin-top: 2.2em;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--sand);
+}
+
+main blockquote {
+  margin: 1.4em 0;
+  padding: 14px 18px;
+  background: var(--sand);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  font-style: italic;
+}
+
+/* generic content lists (resources, etc.) get a subtle lift */
+main ul:not(.topic-grid) li {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+/* ---------- Topic cards (homepage) ---------- */
+
+.topic-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.topic-card a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: linear-gradient(180deg, #fff7e8, var(--sand-light));
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm), var(--shadow-inset);
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid rgba(140, 106, 63, 0.18);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.topic-card a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md), var(--shadow-inset);
+}
+
+.topic-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--dusk-blue-light), var(--dusk-blue));
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: var(--sand-light);
+}
+
+.topic-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.topic-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.topic-title {
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--dusk-blue);
+}
+
+.topic-desc {
+  font-size: 13px;
+  color: var(--bronze);
+}
+
+.topic-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--bronze);
+  opacity: 0.6;
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.topic-card a:hover .topic-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+/* ---------- Footer ---------- */
+
 footer.site-footer {
-  background: var(--dusk-blue);
+  background: linear-gradient(180deg, var(--dusk-blue), #162c3f);
   color: var(--sand-light);
   text-align: center;
-  padding: 24px;
+  padding: 26px 24px;
   font-size: 13px;
-  margin-top: 40px;
+  box-shadow: 0 -6px 16px rgba(31, 22, 8, 0.18);
 }
+
+/* ---------- Misc ---------- */
 
 .coming-soon {
   border: 1px dashed var(--bronze);
   padding: 24px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   background: var(--sand);
+  box-shadow: var(--shadow-inset);
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 28px 12px 40px;
+    padding: 32px 22px 40px;
+  }
+
+  .hero + main {
+    margin-top: -24px;
+  }
+
+  .hero {
+    padding: 80px 20px 90px;
+  }
+
+  .hero .headline {
+    font-size: 28px;
+  }
 }
