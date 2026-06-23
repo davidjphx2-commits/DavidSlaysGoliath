@@ -47,7 +47,7 @@ a:hover {
 
 header.site-header {
   background: linear-gradient(180deg, var(--dusk-blue-light), var(--dusk-blue));
-  padding: 18px 24px;
+  padding: 10px 24px;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -63,9 +63,10 @@ header.site-header.is-scrolled {
   max-width: 1180px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 28px;
   position: relative;
 }
 
@@ -73,13 +74,13 @@ header.site-header.is-scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   position: relative;
+  flex-shrink: 0;
 }
 
 .site-logo {
   display: block;
-  height: 58px;
+  height: 96px;
   width: auto;
 }
 
@@ -164,8 +165,19 @@ nav.site-nav a.active {
 }
 
 @media (max-width: 760px) {
+  .site-logo {
+    height: 56px;
+  }
+
+  .header-top {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .nav-toggle {
     display: flex;
+    position: static;
+    transform: none;
   }
 
   nav.site-nav {
