@@ -1,12 +1,15 @@
 (function () {
-  // floating gutter medallion (left margin, wide screens) — added once, every page
-  if (!document.querySelector('.gutter-medallion')) {
-    var g = document.createElement('a');
-    g.className = 'gutter-medallion';
-    g.href = 'index.html';
-    g.setAttribute('aria-label', 'David Slays Goliath — home');
-    g.innerHTML = '<img src="assets/logo-medallion.png" alt="David Slays Goliath">';
-    document.body.appendChild(g);
+  // centered top medallion — above the hero on home, above the title on interior
+  if (!document.querySelector('.top-medallion')) {
+    var med = document.createElement('a');
+    med.className = 'top-medallion';
+    med.href = 'index.html';
+    med.setAttribute('aria-label', 'David Slays Goliath — home');
+    med.innerHTML = '<img src="assets/logo-medallion.png" alt="David Slays Goliath">';
+    var hero = document.querySelector('.hero');
+    var main = document.querySelector('main');
+    if (hero) hero.insertBefore(med, hero.firstChild);
+    else if (main) main.insertBefore(med, main.firstChild);
   }
 
   // mobile nav toggle
