@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="David Slays Goliath">
+  <defs>
+    <radialGradient id="innerBg" cx="42%" cy="34%" r="75%">
+      <stop offset="0%" stop-color="#2A5075"/>
+      <stop offset="70%" stop-color="#1F3D5C"/>
+      <stop offset="100%" stop-color="#15293D"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D9AC4E"/>
+      <stop offset="50%" stop-color="#B4862E"/>
+      <stop offset="100%" stop-color="#8A6522"/>
+    </linearGradient>
+    <linearGradient id="goldFig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E4B45C"/>
+      <stop offset="100%" stop-color="#B4862E"/>
+    </linearGradient>
+    <path id="arcTop" d="M 60 200 A 140 140 0 0 1 340 200" fill="none"/>
+    <path id="arcBot" d="M 72 200 A 128 128 0 0 0 328 200" fill="none"/>
+  </defs>
+
+  <!-- outer seal -->
+  <circle cx="200" cy="200" r="196" fill="url(#ring)"/>
+  <circle cx="200" cy="200" r="186" fill="#15293D"/>
+  <!-- rope/bead ring -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ring)" stroke-width="3"/>
+  <!-- inner scene disc -->
+  <circle cx="200" cy="200" r="128" fill="url(#innerBg)"/>
+  <circle cx="200" cy="200" r="128" fill="none" stroke="url(#ring)" stroke-width="4"/>
+
+  <!-- curved text -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" letter-spacing="4" fill="url(#ring)">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">DAVID SLAYS GOLIATH</textPath>
+  </text>
+  <text font-family="Georgia, serif" font-weight="600" font-size="15" letter-spacing="3" fill="#C9A24A">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">DAVIDSLAYSGOLIATH.COM</textPath>
+  </text>
+  <!-- side stars separating the two arcs -->
+  <circle cx="64" cy="200" r="4" fill="url(#ring)"/>
+  <circle cx="336" cy="200" r="4" fill="url(#ring)"/>
+
+  <!-- ===== the scene ===== -->
+  <!-- ground -->
+  <path d="M96 262 Q200 250 304 262 L304 270 Q200 258 96 270 Z" fill="#0e2032"/>
+  <!-- light rays behind David -->
+  <g opacity="0.16" fill="#E4B45C">
+    <path d="M150 150 L120 110 L162 138 Z"/>
+    <path d="M150 150 L150 100 L172 140 Z"/>
+    <path d="M150 150 L188 112 L178 150 Z"/>
+  </g>
+
+  <!-- GOLIATH — large, right, helmeted, shield + spear, hunched -->
+  <g fill="#0d1b29">
+    <!-- spear -->
+    <rect x="286" y="120" width="5" height="150" rx="2.5" transform="rotate(6 288 195)"/>
+    <path d="M289 116 l7 14 l-14 0 Z" transform="rotate(6 288 195)"/>
+    <!-- body -->
+    <path d="M232 262 L232 176 Q232 150 250 144 Q244 150 246 158
+             L262 158 Q266 150 260 144 Q280 150 280 178 L280 262 Z"/>
+    <!-- shield arm -->
+    <path d="M236 190 q-26 4 -30 34 q-2 22 14 30 l6 -10 q-12 -6 -10 -22 q2 -18 22 -22 Z"/>
+    <!-- shield -->
+    <ellipse cx="212" cy="214" rx="20" ry="26" fill="#122336"/>
+    <ellipse cx="212" cy="214" rx="20" ry="26" fill="none" stroke="#2a4058" stroke-width="2"/>
+    <circle cx="212" cy="214" r="5" fill="#2a4058"/>
+    <!-- helmet head + plume -->
+    <path d="M250 132 q22 -2 24 20 q1 16 -12 22 q-16 4 -22 -10 q-4 -18 10 -32 Z"/>
+    <path d="M256 116 q6 -14 16 -14 q-4 8 -6 18 Z" fill="#0d1b29"/>
+  </g>
+
+  <!-- DAVID — small, left, dynamic, sling raised, stone in flight -->
+  <g fill="url(#goldFig)">
+    <!-- head -->
+    <circle cx="150" cy="176" r="12"/>
+    <!-- tunic body -->
+    <path d="M150 188 Q136 196 140 224 L132 262 L146 262 L152 228 L160 262 L174 262 L166 224 Q170 200 160 190 Z"/>
+    <!-- planted front leg accent -->
+    <!-- raised sling arm -->
+    <path d="M156 196 Q176 178 168 152" stroke="url(#goldFig)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- back/lead arm -->
+    <path d="M146 204 Q128 208 124 226" stroke="url(#goldFig)" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- sling cords + pouch above hand -->
+    <path d="M168 150 q14 -10 26 -2" stroke="url(#goldFig)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- the stone, mid-flight toward Goliath -->
+  <circle cx="204" cy="150" r="6" fill="#E4B45C"/>
+  <path d="M204 150 q-14 -2 -26 4" stroke="#E4B45C" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="1 6" opacity="0.7"/>
+</svg>
