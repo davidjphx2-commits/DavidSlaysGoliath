@@ -53,16 +53,17 @@ header.site-header.is-scrolled{background:rgba(251,247,240,.82);backdrop-filter:
 .site-title .brand-mark{display:none}
 
 /* centered top medallion — in normal flow, scrolls away on scroll-down */
-.top-medallion{display:block;width:130px;height:130px;margin:0 auto;
+.top-medallion{display:block;width:260px;height:260px;margin:0 auto;
   opacity:0;transform:translateY(-8px) scale(.96);animation:medIn .8s var(--ease) .1s forwards}
-.top-medallion img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 22px rgba(31,61,92,.22))}
+.top-medallion img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 26px rgba(31,61,92,.24))}
 @keyframes medIn{to{opacity:1;transform:none}}
-.hero .top-medallion{margin:0 auto 20px}
-main > .top-medallion{margin:0 auto 8px}
+.hero .top-medallion{margin:0 auto 18px}
+main > .top-medallion{margin:0 auto 6px}
 /* interior article pages: clear the sticky header so the medallion isn't cut */
-main:has(> .page-title){padding-top:92px}
-main:has(> .top-medallion) .page-title{margin-top:.15em}
-@media(min-width:1100px){.top-medallion{width:150px;height:150px}}
+main:has(> .page-title){padding-top:86px}
+main:has(> .top-medallion) .page-title{margin-top:.1em}
+@media(min-width:1100px){.top-medallion{width:300px;height:300px}}
+@media(max-width:520px){.top-medallion{width:210px;height:210px}}
 
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:38px;padding:9px;background:none;border:1px solid var(--line);border-radius:10px;cursor:pointer}
 .nav-toggle span{display:block;height:2px;width:100%;background:var(--navy);border-radius:2px;transition:transform .25s var(--ease),opacity .25s var(--ease)}
