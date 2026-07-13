@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo Concepts, Round 2 — David Slays Goliath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF7F0;--ink:#1B2B38;--ink-dim:#5C6B76;--navy:#1F3D5C;--gold:#B4862E;--line:rgba(31,61,92,.12);--serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;padding:56px 24px}
+h1{font-family:var(--serif);font-size:2.3rem;text-align:center;font-weight:700}
+.intro{text-align:center;color:var(--ink-dim);max-width:640px;margin:12px auto 46px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:1120px;margin:0 auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 10px 30px -20px rgba(31,61,92,.3)}
+.no{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-family:var(--serif);font-size:1.3rem;margin:4px 0}
+.desc{color:var(--ink-dim);font-size:.9rem;min-height:56px}
+.stage{margin:20px 0;display:flex;align-items:center;justify-content:center;gap:22px;background:var(--paper);border-radius:14px;padding:24px;min-height:180px}
+.stage.dark{background:var(--navy);min-height:110px}
+.stage.dark .word{color:#fff}
+.stage.sm{min-height:96px}
+.word{font-family:var(--serif);font-weight:700;font-size:1.12rem;color:var(--ink)}
+.word b{color:var(--gold)}
+.lockup{display:flex;align-items:center;gap:14px}
+svg{display:block}
+</style>
+</head>
+<body>
+<h1>Logo Concepts — Round 2</h1>
+<p class="intro">The happy medium: real David-vs-Goliath scenes like your original medallion, redrawn as clean modern silhouettes in navy &amp; gold. Each shown large, small (nav size), and on dark. Pick a number and I&rsquo;ll refine it to final.</p>
+
+<div class="grid">
+
+  <!-- 7: Modern Medallion (evolution of the original) -->
+  <div class="card">
+    <div class="no">Concept 07</div>
+    <h3>The Modern Medallion</h3>
+    <div class="desc">Your original, evolved — circular seal, curved name, the David-vs-Goliath scene inside as a clean two-tone silhouette. Familiar but sharp and scalable.</div>
+    <div class="stage">
+      <svg width="170" height="170" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="96" fill="#1F3D5C"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#B4862E" stroke-width="3"/>
+        <circle cx="100" cy="100" r="70" fill="#16304a"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#B4862E" stroke-width="1.5" opacity=".6"/>
+        <path id="tc" d="M100 20 a80 80 0 0 1 0 160 a80 80 0 0 1 0 -160" fill="none"/>
+        <text font-family="Fraunces,serif" font-weight="700" font-size="15" letter-spacing="3" fill="#B4862E"><textPath href="#tc" startOffset="6%">DAVID SLAYS GOLIATH</textPath></text>
+        <!-- Goliath silhouette (large, right) -->
+        <g fill="#0d2338">
+          <path d="M128 150 L128 96 Q128 78 116 74 Q126 66 122 54 Q118 44 108 46 Q112 54 108 60 Q104 66 112 72 Q100 76 100 96 L100 150 Z"/>
+          <rect x="126" y="70" width="4" height="60" rx="2"/>
+        </g>
+        <!-- David silhouette (small, left, sling raised) -->
+        <g fill="#B4862E">
+          <circle cx="78" cy="86" r="6"/>
+          <path d="M78 92 Q72 96 74 112 L70 132 L76 132 L80 114 L84 132 L90 132 L86 112 Q88 100 84 94 Z"/>
+          <path d="M80 96 L96 78" stroke="#B4862E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="98" cy="76" r="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="stage sm">
+      <div class="lockup">
+        <svg width="52" height="52" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="#1F3D5C"/><circle cx="100" cy="100" r="96" fill="none" stroke="#B4862E" stroke-width="5"/><g fill="#0d2338"><path d="M128 150 L128 96 Q128 78 116 74 Q126 66 122 54 Q118 44 108 46 Q112 54 108 60 Q104 66 112 72 Q100 76 100 96 L100 150 Z"/></g><g fill="#B4862E"><circle cx="78" cy="86" r="7"/><path d="M78 92 Q72 96 74 112 L70 134 L77 134 L80 114 L84 134 L91 134 L86 112 Q88 100 84 94 Z"/><path d="M80 96 L96 78" stroke="#B4862E" stroke-width="4" stroke-linecap="round"/></g></svg>
+        <span class="word">David <b>Slays</b> Goliath</span>
+      </div>
+    </div>
+    <div class="stage dark"><span class="word">David <b>Slays</b> Goliath</span></div>
+  </div>
+
+  <!-- 8: The Shield Scene -->
+  <div class="card">
+    <div class="no">Concept 08</div>
+    <h3>The Shield Scene</h3>
+    <div class="desc">A heraldic shield holding the standoff — little David braced with sling swinging, the giant towering over him. Reads as courage and crest at once.</div>
+    <div class="stage">
+      <svg width="150" height="176" viewBox="0 0 150 176">
+        <path d="M75 6 L142 26 V88 C142 130 108 158 75 170 C42 158 8 130 8 88 V26 Z" fill="#1F3D5C"/>
+        <path d="M75 14 L134 32 V88 C134 124 104 150 75 161 C46 150 16 124 16 88 V32 Z" fill="none" stroke="#B4862E" stroke-width="2" opacity=".55"/>
+        <!-- Goliath -->
+        <g fill="#0d2338">
+          <path d="M104 140 L104 74 Q104 54 90 50 Q100 42 96 30 Q92 22 84 24 Q88 32 84 38 Q80 44 88 50 Q74 54 74 74 L74 140 Z"/>
+          <rect x="102" y="46" width="4" height="86" rx="2"/>
+          <path d="M60 66 a14 14 0 0 1 0 28 Z" opacity=".9"/>
+        </g>
+        <!-- David -->
+        <g fill="#B4862E">
+          <circle cx="50" cy="80" r="7"/>
+          <path d="M50 87 Q43 92 45 112 L41 136 L48 136 L52 114 L56 136 L63 136 L58 112 Q60 98 55 90 Z"/>
+          <path d="M52 92 Q64 78 74 84" stroke="#B4862E" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="76" cy="84" r="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="stage sm">
+      <div class="lockup">
+        <svg width="44" height="52" viewBox="0 0 150 176"><path d="M75 6 L142 26 V88 C142 130 108 158 75 170 C42 158 8 130 8 88 V26 Z" fill="#1F3D5C"/><g fill="#0d2338"><path d="M104 140 L104 74 Q104 54 90 50 Q100 42 96 30 Q92 22 84 24 Q88 32 84 38 Q80 44 88 50 Q74 54 74 74 L74 140 Z"/></g><g fill="#B4862E"><circle cx="50" cy="80" r="8"/><path d="M50 87 Q43 92 45 112 L41 138 L49 138 L52 114 L56 138 L64 138 L58 112 Q60 98 55 90 Z"/></g></svg>
+        <span class="word">David <b>Slays</b> Goliath</span>
+      </div>
+    </div>
+    <div class="stage dark"><span class="word">David <b>Slays</b> Goliath</span></div>
+  </div>
+
+  <!-- 9: David the Slinger (single hero silhouette) -->
+  <div class="card">
+    <div class="no">Concept 09</div>
+    <h3>David the Slinger</h3>
+    <div class="desc">One strong figure — David mid-throw, sling whirling overhead, the stone about to fly, ringed by a gold circle. Heroic, focused, unmistakable.</div>
+    <div class="stage">
+      <svg width="170" height="170" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="94" fill="none" stroke="#B4862E" stroke-width="4"/>
+        <circle cx="100" cy="100" r="94" fill="#FBF7F0"/>
+        <!-- sling arc + stone -->
+        <path d="M92 62 a34 24 0 1 1 -0.1 0" fill="none" stroke="#B4862E" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+        <circle cx="128" cy="60" r="7" fill="#B4862E"/>
+        <!-- David figure -->
+        <g fill="#1F3D5C">
+          <circle cx="86" cy="92" r="11"/>
+          <path d="M86 103 Q74 110 78 140 L70 168 L82 168 L88 142 L96 168 L108 168 L100 140 Q104 118 96 106 Z"/>
+          <!-- raised arm to sling -->
+          <path d="M92 108 Q104 92 92 74" stroke="#1F3D5C" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <!-- planted arm -->
+          <path d="M88 116 Q74 122 70 138" stroke="#1F3D5C" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="stage sm">
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="#1F3D5C"/><circle cx="128" cy="60" r="9" fill="#B4862E"/><g fill="#fff"><circle cx="86" cy="92" r="12"/><path d="M86 103 Q74 110 78 140 L70 170 L83 170 L88 142 L97 170 L110 170 L100 140 Q104 118 96 106 Z"/><path d="M92 108 Q104 92 92 74" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/></g></svg>
+        <span class="word">David <b>Slays</b> Goliath</span>
+      </div>
+    </div>
+    <div class="stage dark"><span class="word">David <b>Slays</b> Goliath</span></div>
+  </div>
+
+  <!-- 10: The Fallen Giant -->
+  <div class="card">
+    <div class="no">Concept 10</div>
+    <h3>The Victory</h3>
+    <div class="desc">The moment after — David standing tall, sling lowered, the giant&rsquo;s helmet fallen at his feet. Triumph and humility. The whole story in one frame.</div>
+    <div class="stage">
+      <svg width="170" height="170" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="94" fill="#1F3D5C"/>
+        <circle cx="100" cy="100" r="94" fill="none" stroke="#B4862E" stroke-width="3"/>
+        <!-- ground line -->
+        <path d="M40 150 H160" stroke="#B4862E" stroke-width="2" opacity=".5"/>
+        <!-- David standing -->
+        <g fill="#B4862E">
+          <circle cx="90" cy="70" r="10"/>
+          <path d="M90 80 Q80 88 84 118 L78 150 L88 150 L92 122 L96 150 L106 150 L100 118 Q104 92 96 82 Z"/>
+          <path d="M88 92 Q76 100 74 116" stroke="#B4862E" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <!-- fallen giant helmet -->
+        <g fill="#0d2338">
+          <path d="M118 150 a20 12 0 0 1 40 0 Z"/>
+          <path d="M138 128 a20 20 0 0 1 20 22 L118 150 a20 20 0 0 1 20 -22 Z" opacity=".85"/>
+        </g>
+      </svg>
+    </div>
+    <div class="stage sm">
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="#1F3D5C"/><g fill="#B4862E"><circle cx="90" cy="70" r="11"/><path d="M90 80 Q80 88 84 118 L78 152 L88 152 L92 122 L96 152 L106 152 L100 118 Q104 92 96 82 Z"/></g><g fill="#88a0b5"><path d="M118 152 a20 12 0 0 1 40 0 Z"/></g></svg>
+        <span class="word">David <b>Slays</b> Goliath</span>
+      </div>
+    </div>
+    <div class="stage dark"><span class="word">David <b>Slays</b> Goliath</span></div>
+  </div>
+
+  <!-- 11: Goliath's Helm + Stone -->
+  <div class="card">
+    <div class="no">Concept 11</div>
+    <h3>The Striking Stone</h3>
+    <div class="desc">Bold and graphic — the giant&rsquo;s helmeted profile in navy, the gold stone striking home at the forehead. Fierce, memorable, works tiny as a favicon.</div>
+    <div class="stage">
+      <svg width="170" height="170" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="94" fill="#FBF7F0" stroke="#1F3D5C" stroke-width="4"/>
+        <!-- Goliath helmeted head profile facing left -->
+        <g fill="#1F3D5C">
+          <path d="M120 60 Q150 66 150 104 Q150 150 108 154 Q78 154 74 120 Q72 96 86 82 Q98 70 120 60 Z"/>
+          <path d="M84 64 Q104 50 124 58 L120 72 Q104 62 90 74 Z"/>
+        </g>
+        <!-- impact stone -->
+        <circle cx="82" cy="98" r="12" fill="#B4862E"/>
+        <path d="M82 98 l -14 -4 M82 98 l -13 6 M82 98 l -10 -11" stroke="#B4862E" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="stage sm">
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="#1F3D5C"/><g fill="#fff"><path d="M120 60 Q150 66 150 104 Q150 150 108 154 Q78 154 74 120 Q72 96 86 82 Q98 70 120 60 Z"/></g><circle cx="82" cy="98" r="13" fill="#B4862E"/></svg>
+        <span class="word">David <b>Slays</b> Goliath</span>
+      </div>
+    </div>
+    <div class="stage dark"><span class="word">David <b>Slays</b> Goliath</span></div>
+  </div>
+
+</div>
+</body>
+</html>
