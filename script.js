@@ -1,4 +1,5 @@
 (function () {
+  // mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
   if (toggle && nav) {
@@ -16,12 +17,42 @@
     });
   }
 
+  // header shrink + scroll progress line (inject the bar if a page lacks it)
   var header = document.querySelector('.site-header');
-  if (header) {
-    var onScroll = function () {
-      header.classList.toggle('is-scrolled', window.scrollY > 8);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  var prog = document.getElementById('scrollProgress');
+  if (!prog) {
+    prog = document.createElement('div');
+    prog.id = 'scrollProgress';
+    prog.className = 'scroll-progress';
+    document.body.appendChild(prog);
   }
+  var onScroll = function () {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+    if (prog) {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // reveal on scroll — paragraphs, cards, diagrams, sections
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.reveal, main > p, main > h2, main > h3, .diagram-card, .verse-band');
+  if (reduce || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('reveal', 'in'); });
+    return;
+  }
+  targets.forEach(function (el) { el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  targets.forEach(function (el, i) {
+    // gentle stagger for cards in the same grid
+    if (el.classList.contains('topic-card')) el.style.transitionDelay = ((i % 5) * 80) + 'ms';
+    io.observe(el);
+  });
 })();
