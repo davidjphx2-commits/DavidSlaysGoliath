@@ -11,14 +11,14 @@
 :root{
   --paper:#FBF7F0;        /* warm cream */
   --paper-2:#FFFFFF;
-  --ink:#22303A;          /* deep slate — reads on cream */
+  --ink:#1B2B38;          /* deep slate — reads on cream */
   --ink-dim:#5C6B76;
-  --sky:#3BA7D9;          /* dawn sky blue */
-  --coral:#F4795B;        /* warm coral */
-  --amber:#F5B93B;        /* gold/amber */
-  --teal:#2CB6A0;         /* fresh living-water teal */
-  --violet:#8B7BD8;       /* soft violet */
-  --line:rgba(34,48,58,.10);
+  --navy:#1F3D5C;         /* deep dignified blue — the primary */
+  --navy-2:#2C5478;
+  --gold:#B4862E;         /* warm scriptural gold — the accent */
+  --gold-bright:#CB9C3E;
+  --stone:#6E7F86;        /* muted slate-stone — quiet third */
+  --line:rgba(31,61,92,.12);
   --ease:cubic-bezier(.16,1,.3,1);
   --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif;
 }
@@ -29,15 +29,15 @@ h1,h2,h3,.serif{font-family:var(--serif)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:linear-gradient(90deg,var(--coral),var(--amber),var(--teal),var(--sky))}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:linear-gradient(90deg,var(--navy),var(--gold))}
 
-/* colorful mesh background */
-.mesh{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.85;
+/* soft mesh background — navy + gold only, dignified */
+.mesh{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.8;
   background:
-    radial-gradient(40% 40% at 12% 8%,rgba(59,167,217,.20),transparent 60%),
-    radial-gradient(38% 38% at 88% 12%,rgba(244,121,91,.18),transparent 60%),
-    radial-gradient(45% 45% at 78% 82%,rgba(44,182,160,.16),transparent 60%),
-    radial-gradient(40% 40% at 15% 90%,rgba(245,185,59,.16),transparent 60%)}
+    radial-gradient(42% 42% at 12% 8%,rgba(31,61,92,.16),transparent 60%),
+    radial-gradient(40% 40% at 88% 14%,rgba(180,134,46,.14),transparent 60%),
+    radial-gradient(46% 46% at 82% 84%,rgba(31,61,92,.12),transparent 60%),
+    radial-gradient(40% 40% at 15% 90%,rgba(180,134,46,.10),transparent 60%)}
 
 /* header */
 .hdr{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:16px 30px;transition:.3s var(--ease)}
@@ -45,28 +45,27 @@ img{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:11px}
 .brand .mark{width:36px;height:36px;flex:none}
 .brand .word{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
-.brand .word b{background:linear-gradient(90deg,var(--coral),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .word b{color:var(--gold);font-weight:700}
 .hdr nav{display:flex;gap:6px}
 .hdr nav a{font-size:.86rem;font-weight:500;color:var(--ink-dim);padding:8px 14px;border-radius:99px;transition:.2s}
-.hdr nav a:hover{color:var(--ink);background:rgba(34,48,58,.05)}
+.hdr nav a:hover{color:var(--navy);background:rgba(31,61,92,.06)}
 @media(max-width:900px){.hdr nav{display:none}}
 
 /* hero */
 .hero{padding:150px 30px 40px;max-width:1120px;margin:0 auto;text-align:center;position:relative}
-.pill{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--sky);
-  background:rgba(59,167,217,.12);padding:8px 16px;border-radius:99px;margin-bottom:26px;opacity:0;animation:rise .8s var(--ease) .1s forwards}
-.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--coral)}
-.hero h1{font-size:clamp(2.8rem,7.5vw,5.8rem);line-height:1.02;font-weight:700;letter-spacing:-.03em;max-width:16ch;margin:0 auto;
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--navy);
+  background:rgba(31,61,92,.10);padding:8px 16px;border-radius:99px;margin-bottom:26px;opacity:0;animation:rise .8s var(--ease) .1s forwards}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.8rem);line-height:1.02;font-weight:700;letter-spacing:-.03em;max-width:16ch;margin:0 auto;color:var(--ink);
   opacity:0;animation:rise 1s var(--ease) .25s forwards}
-.hero h1 .grad{background:linear-gradient(120deg,var(--coral),var(--amber) 60%,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .grad{color:var(--gold)}
 .hero .sub{margin-top:22px;font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--ink-dim);max-width:40ch;margin-inline:auto;
   opacity:0;animation:rise 1s var(--ease) .45s forwards}
 @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
 /* hero image — framed, bright, floating */
 .frame{max-width:900px;margin:44px auto 0;position:relative;opacity:0;animation:rise 1.1s var(--ease) .6s forwards}
-.frame .glow{position:absolute;inset:-14px;border-radius:34px;background:linear-gradient(120deg,var(--coral),var(--amber),var(--teal),var(--sky));filter:blur(28px);opacity:.4;animation:hue 14s linear infinite}
-@keyframes hue{to{filter:blur(28px) hue-rotate(360deg)}}
+.frame .glow{position:absolute;inset:-14px;border-radius:34px;background:linear-gradient(120deg,var(--navy),var(--gold));filter:blur(30px);opacity:.34}
 .frame .pic{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 30px 70px -24px rgba(34,48,58,.4);border:6px solid #fff}
 .frame .pic img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);animation:drift 24s var(--ease) infinite alternate}
 @keyframes drift{to{transform:scale(1.12)}}
@@ -95,14 +94,16 @@ img{max-width:100%;display:block}
 .card .go{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;position:relative;transition:gap .3s var(--ease)}
 .card:hover .go{gap:14px}
 .card .go svg{width:16px;height:16px;fill:none;stroke-width:2.2}
-/* per-card colors */
-.c1{--c:var(--coral)} .c2{--c:var(--sky)} .c3{--c:var(--teal)} .c4{--c:var(--violet)} .c5{--c:var(--amber)}
+/* per-card colors — navy / gold / stone, dignified rotation (no rainbow) */
+.c1{--c:var(--navy)} .c2{--c:var(--gold)} .c3{--c:var(--navy)} .c4{--c:var(--gold)} .c5{--c:var(--stone)}
 .card .ic{background:var(--c)} .card .tint{background:var(--c)} .card .go{color:var(--c)}
 .card{border-top:3px solid var(--c)}
 
 /* verse band — colorful */
 .verse{margin:0 auto 90px;max-width:1020px;padding:64px 40px;border-radius:30px;text-align:center;
-  background:linear-gradient(120deg,var(--sky),var(--teal));color:#fff;position:relative;overflow:hidden}
+  background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+.verse blockquote{color:#fff}
+.verse .ref{color:var(--gold-bright)}
 .verse::after{content:"";position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.12)}
 .verse blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.3;font-weight:600;max-width:800px;margin:0 auto;position:relative}
 .verse .ref{margin-top:20px;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;opacity:.9}
@@ -110,15 +111,15 @@ img{max-width:100%;display:block}
 /* video slot */
 .filmwrap{max-width:1000px;margin:0 auto 90px;padding:0 30px}
 .film{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/9;
-  background:linear-gradient(135deg,#eaf4fa,#fdeee9);display:grid;place-items:center;cursor:pointer;border:1px solid var(--line)}
-.film .play{width:80px;height:80px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(34,48,58,.4);transition:transform .3s var(--ease)}
+  background:linear-gradient(135deg,#eef2f7,#f7efe0);display:grid;place-items:center;cursor:pointer;border:1px solid var(--line)}
+.film .play{width:80px;height:80px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(31,61,92,.4);transition:transform .3s var(--ease)}
 .film:hover .play{transform:scale(1.1)}
-.film .play::after{content:"";border-left:22px solid var(--coral);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.film .play::after{content:"";border-left:22px solid var(--navy);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
 .film .cap{position:absolute;bottom:18px;left:22px;font-family:var(--serif);font-size:1.05rem;color:var(--ink-dim)}
 
 footer{padding:56px 30px;text-align:center;color:var(--ink-dim);font-size:.86rem;border-top:1px solid var(--line)}
 footer .fb{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--ink);margin-bottom:6px}
-footer .fb b{background:linear-gradient(90deg,var(--coral),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+footer .fb b{color:var(--gold)}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card,.pill,.hero h1,.hero .sub,.frame{opacity:1!important;transform:none!important}}
 </style>
@@ -130,7 +131,7 @@ footer .fb b{background:linear-gradient(90deg,var(--coral),var(--amber));-webkit
 <header class="hdr" id="hdr">
   <a class="brand" href="#top">
     <svg class="mark" viewBox="0 0 40 40" fill="none">
-      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4795B"/><stop offset="1" stop-color="#F5B93B"/></linearGradient></defs>
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F3D5C"/><stop offset="1" stop-color="#B4862E"/></linearGradient></defs>
       <path d="M8 6 C 26 6, 34 14, 34 22 C 34 31, 27 36, 18 36" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
       <circle cx="20" cy="21" r="6.5" fill="url(#g)"/>
     </svg>
