@@ -48,8 +48,19 @@ header.site-header.is-scrolled{background:rgba(251,247,240,.82);backdrop-filter:
 .site-title{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
 .site-title b{color:var(--gold)}
 .site-logo{height:44px;width:auto}
-.brand-mark{width:52px;height:52px;flex:none;object-fit:contain}
-header.site-header.is-scrolled .brand-mark{width:44px;height:44px;transition:width .3s var(--ease),height .3s var(--ease)}
+/* header wordmark is text only — the medallion lives in the left gutter (below),
+   large enough to actually read. Chopping a detailed medallion into a 44px
+   header circle looked terrible, so it's out of the header entirely. */
+.site-title .brand-mark{display:none}
+
+/* floating gutter medallion — sits in the empty left margin on wide screens */
+.gutter-medallion{position:fixed;left:28px;top:96px;width:132px;height:132px;z-index:40;
+  opacity:.96;transition:transform .4s var(--ease),opacity .3s;display:none}
+.gutter-medallion img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 24px rgba(31,61,92,.28))}
+.gutter-medallion:hover{transform:translateY(-3px) rotate(-2deg);opacity:1}
+/* only show where there's real gutter room beside the 1120px content column */
+@media(min-width:1320px){.gutter-medallion{display:block}}
+@media(min-width:1560px){.gutter-medallion{width:160px;height:160px;left:44px}}
 
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:38px;padding:9px;background:none;border:1px solid var(--line);border-radius:10px;cursor:pointer}
 .nav-toggle span{display:block;height:2px;width:100%;background:var(--navy);border-radius:2px;transition:transform .25s var(--ease),opacity .25s var(--ease)}

@@ -1,4 +1,14 @@
 (function () {
+  // floating gutter medallion (left margin, wide screens) — added once, every page
+  if (!document.querySelector('.gutter-medallion')) {
+    var g = document.createElement('a');
+    g.className = 'gutter-medallion';
+    g.href = 'index.html';
+    g.setAttribute('aria-label', 'David Slays Goliath — home');
+    g.innerHTML = '<img src="assets/logo-medallion.png" alt="David Slays Goliath">';
+    document.body.appendChild(g);
+  }
+
   // mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
