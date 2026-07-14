@@ -197,6 +197,9 @@ main ul:not(.topic-grid) li{position:relative;margin-bottom:8px}
 footer.site-footer{border-top:1px solid var(--line);background:none;color:var(--ink-dim);text-align:center;padding:48px 30px;font-size:.86rem}
 footer.site-footer .footer-brand{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--ink);margin-bottom:6px}
 footer.site-footer .footer-brand b{color:var(--gold)}
+footer.site-footer .footer-ministry{margin-bottom:8px;color:var(--ink-dim);font-size:.9rem}
+footer.site-footer .footer-ministry a{color:var(--gold);text-decoration:none}
+footer.site-footer .footer-ministry a:hover{text-decoration:underline}
 
 /* ---------- reveal on scroll ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}

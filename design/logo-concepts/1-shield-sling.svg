@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C4F6E"/>
+      <stop offset="100%" stop-color="#1F3A52"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C887"/>
+      <stop offset="100%" stop-color="#8C6A3F"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M100,12 L176,38 V102 C176,148 142,178 100,192 C58,178 24,148 24,102 V38 Z"
+        fill="url(#shieldFill)" stroke="url(#goldStroke)" stroke-width="5"/>
+  <path d="M100,22 L166,45 V102 C166,142 136,168 100,181 C64,168 34,142 34,102 V45 Z"
+        fill="none" stroke="#B8924D" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- sling strap -->
+  <path d="M72,100 C76,82 90,76 100,90"
+        fill="none" stroke="#E8DCC0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100,90 C110,76 124,82 126,100 C127,108 116,114 100,116"
+        fill="none" stroke="#E8DCC0" stroke-width="4" stroke-linecap="round"/>
+  <!-- pouch -->
+  <ellipse cx="100" cy="116" rx="11" ry="8" fill="#B8924D" stroke="#E8DCC0" stroke-width="1.5"/>
+  <!-- stone in flight -->
+  <circle cx="138" cy="76" r="9" fill="#E8DCC0" stroke="#B8924D" stroke-width="1.5"/>
+  <!-- motion arc -->
+  <path d="M104,108 Q120,92 132,82" fill="none" stroke="#E8DCC0" stroke-width="2" stroke-dasharray="3,5" opacity="0.7"/>
+</svg>

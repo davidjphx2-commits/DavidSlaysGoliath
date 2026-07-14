@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="letterFillD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C4F6E"/>
+      <stop offset="100%" stop-color="#1F3A52"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="180" height="180" rx="22" fill="#E8DCC0"/>
+  <text x="100" y="152" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="150" font-weight="700" fill="url(#letterFillD)">D</text>
+
+  <!-- stone sits in the bowl of the D -->
+  <circle cx="118" cy="108" r="14" fill="#B8924D" stroke="#8C6A3F" stroke-width="2"/>
+</svg>
