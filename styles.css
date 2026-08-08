@@ -209,3 +209,7 @@ footer.site-footer .footer-ministry a:hover{text-decoration:underline}
   *{animation:none!important}
   .reveal{opacity:1!important;transform:none!important}
 }
+
+/* 490.life banner (2026-08) */
+.life490-banner{background:linear-gradient(90deg,#1F3D5C,#2a4f75);color:#FBF7F0;text-align:center;padding:10px 16px;font-size:.98rem;line-height:1.4}
+.life490-banner a{color:#E8C97A;font-weight:700;text-decoration:underline}
